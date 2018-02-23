@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace HotelskaRecepcija
 {
-    public partial class Homepage : Form
+    public partial class DodajNovogGostaForm : Form
     {
-        public Homepage()
+        public DodajNovogGostaForm()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dodajNovogGostaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
