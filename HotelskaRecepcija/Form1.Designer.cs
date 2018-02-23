@@ -28,115 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.labelGuests = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownSobe = new System.Windows.Forms.ToolStripDropDownButton();
+            this.pregledajDostupneSobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rezervirajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // toolStrip1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.labelGuests, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(576, 440);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownSobe,
+            this.toolStripDropDownButton2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(576, 25);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // button3
+            // toolStripDropDownSobe
             // 
-            this.button3.Location = new System.Drawing.Point(3, 295);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.toolStripDropDownSobe.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownSobe.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pregledajDostupneSobeToolStripMenuItem,
+            this.rezervirajNovuSobuToolStripMenuItem});
+            this.toolStripDropDownSobe.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownSobe.Image")));
+            this.toolStripDropDownSobe.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownSobe.Name = "toolStripDropDownSobe";
+            this.toolStripDropDownSobe.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownSobe.Text = "Sobe";
             // 
-            // button1
+            // pregledajDostupneSobeToolStripMenuItem
             // 
-            this.button1.Location = new System.Drawing.Point(3, 149);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pregledajDostupneSobeToolStripMenuItem.Name = "pregledajDostupneSobeToolStripMenuItem";
+            this.pregledajDostupneSobeToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.pregledajDostupneSobeToolStripMenuItem.Text = "Pregledaj dostupne sobe";
             // 
-            // button4
+            // toolStripDropDownButton2
             // 
-            this.button4.Location = new System.Drawing.Point(291, 295);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.popisGostijuToolStripMenuItem});
+            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
             // 
-            // button2
+            // popisGostijuToolStripMenuItem
             // 
-            this.button2.Location = new System.Drawing.Point(291, 149);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.popisGostijuToolStripMenuItem.Name = "popisGostijuToolStripMenuItem";
+            this.popisGostijuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.popisGostijuToolStripMenuItem.Text = "Popis gostiju";
             // 
-            // labelGuests
+            // rezervirajNovuSobuToolStripMenuItem
             // 
-            this.labelGuests.AutoSize = true;
-            this.labelGuests.Location = new System.Drawing.Point(3, 0);
-            this.labelGuests.Name = "labelGuests";
-            this.labelGuests.Size = new System.Drawing.Size(35, 13);
-            this.labelGuests.TabIndex = 4;
-            this.labelGuests.Text = "label1";
-            this.labelGuests.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(291, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.rezervirajNovuSobuToolStripMenuItem.Name = "rezervirajNovuSobuToolStripMenuItem";
+            this.rezervirajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.rezervirajNovuSobuToolStripMenuItem.Text = "Rezerviraj novu sobu";
             // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 440);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.toolStrip1);
             this.Name = "Homepage";
             this.Text = "Home page";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelGuests;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownSobe;
+        private System.Windows.Forms.ToolStripMenuItem pregledajDostupneSobeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rezervirajNovuSobuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
+        private System.Windows.Forms.ToolStripMenuItem popisGostijuToolStripMenuItem;
     }
 }
 
