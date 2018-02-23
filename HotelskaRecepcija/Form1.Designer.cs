@@ -44,6 +44,7 @@
             this.izdajPredračunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.naplatiUsluguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovuUsluguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +66,8 @@
             this.toolStripDropDownSobe.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownSobe.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rezervirajNovuSobuToolStripMenuItem,
-            this.pregledajDostupneSobeToolStripMenuItem});
+            this.pregledajDostupneSobeToolStripMenuItem,
+            this.dodajNovuSobuToolStripMenuItem});
             this.toolStripDropDownSobe.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownSobe.Image")));
             this.toolStripDropDownSobe.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownSobe.Name = "toolStripDropDownSobe";
@@ -172,6 +174,12 @@
             this.dodajNovuUsluguToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.dodajNovuUsluguToolStripMenuItem.Text = "Dodaj novu uslugu";
             // 
+            // dodajNovuSobuToolStripMenuItem
+            // 
+            this.dodajNovuSobuToolStripMenuItem.Name = "dodajNovuSobuToolStripMenuItem";
+            this.dodajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.dodajNovuSobuToolStripMenuItem.Text = "Dodaj novu sobu";
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +212,7 @@
         private System.Windows.Forms.ToolStripMenuItem dodajNovuUsluguToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.ToolStripMenuItem pogledajRasporedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajNovuSobuToolStripMenuItem;
     }
 }
 

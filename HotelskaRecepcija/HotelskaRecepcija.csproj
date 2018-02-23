@@ -66,6 +66,12 @@
     <Compile Include="DodajNovogGostaForm.Designer.cs">
       <DependentUpon>DodajNovogGostaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DodajNovuSobu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajNovuSobu.Designer.cs">
+      <DependentUpon>DodajNovuSobu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DodajNovogGostaForm.resx">
       <DependentUpon>DodajNovogGostaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajNovuSobu.resx">
+      <DependentUpon>DodajNovuSobu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
