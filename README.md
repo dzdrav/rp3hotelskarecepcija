@@ -1,3 +1,8 @@
-##Hotelska recepcija
+## Hotelska recepcija
 
-User documentation is written in _user_documentation.docx_
+Završni projekt iz kolegija **Računarski praktikum 3 (RP3)** na **PMF-Matematički Odsjek, Sveučilišta u Zagrebu**.
+
+### Autori:
+Josipa Surić
+Mateja Šarić
+Dinko Ždravac

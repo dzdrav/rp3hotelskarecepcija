@@ -121,7 +121,7 @@
             this.ClientSize = new System.Drawing.Size(576, 440);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Homepage";
-            this.Text = "Navigation";
+            this.Text = "Home page";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
