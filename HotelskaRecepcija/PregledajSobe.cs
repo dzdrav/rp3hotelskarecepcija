@@ -47,5 +47,32 @@ namespace HotelskaRecepcija
             this.hR_SOBEBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.hR_DatabaseDataSet1);
         }
+
+        private void checkBoxDozvoliPromjene_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxDozvoliPromjene.Checked)
+            {
+                cIJENA_NOCENJATextBox.Enabled = true;
+                aPARTMANCheckBox.Enabled = true;
+                pOGLEDCheckBox.Enabled = true;
+                kupaonicaCheckBox.Enabled = true;
+                klimaCheckBox.Enabled = true;
+                minibarCheckBox.Enabled = true;
+                tvCheckBox.Enabled = true;
+                telefonCheckBox.Enabled = true;
+            }
+            else
+            {
+                cIJENA_NOCENJATextBox.Enabled = false;
+                aPARTMANCheckBox.Enabled = false;
+                pOGLEDCheckBox.Enabled = false;
+                kupaonicaCheckBox.Enabled = false;
+                klimaCheckBox.Enabled = false;
+                minibarCheckBox.Enabled = false;
+                tvCheckBox.Enabled = false;
+                telefonCheckBox.Enabled = false;
+            }
+            
+        }
     }
 }
