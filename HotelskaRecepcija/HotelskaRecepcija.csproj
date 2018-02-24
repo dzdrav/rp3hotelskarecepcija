@@ -78,6 +78,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HR_DatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HR_DatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PregledajSobe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +112,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="HR_DatabaseDataSet1.xsc">
+      <DependentUpon>HR_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HR_DatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HR_DatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HR_DatabaseDataSet1.xss">
+      <DependentUpon>HR_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

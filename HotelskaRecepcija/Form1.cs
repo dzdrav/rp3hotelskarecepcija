@@ -26,5 +26,11 @@ namespace HotelskaRecepcija
         {
 
         }
+
+        private void pregledajDostupneSobeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PregledajSobe novaForma = new PregledajSobe();
+            novaForma.Show();
+        }
     }
 }

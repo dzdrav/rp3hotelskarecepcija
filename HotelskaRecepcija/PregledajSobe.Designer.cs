@@ -33,21 +33,30 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonPrethodna = new System.Windows.Forms.Button();
+            this.buttonSljedeca = new System.Windows.Forms.Button();
             this.checkBoxTelefon = new System.Windows.Forms.CheckBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonZatvori = new System.Windows.Forms.Button();
             this.checkBoxTV = new System.Windows.Forms.CheckBox();
             this.checkBoxKlima = new System.Windows.Forms.CheckBox();
             this.checkBoxKupaonica = new System.Windows.Forms.CheckBox();
             this.checkBoxMiniBar = new System.Windows.Forms.CheckBox();
             this.checkBoxPogled = new System.Windows.Forms.CheckBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 28);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 13);
             this.label1.TabIndex = 0;
@@ -56,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 53);
+            this.label2.Location = new System.Drawing.Point(12, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 1;
@@ -65,7 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(497, 25);
+            this.label3.Location = new System.Drawing.Point(12, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 2;
@@ -74,7 +83,7 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(102, 25);
+            this.textBox1.Location = new System.Drawing.Point(102, 6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(40, 20);
             this.textBox1.TabIndex = 3;
@@ -82,52 +91,54 @@
             // textBox3
             // 
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(474, 46);
+            this.textBox3.Location = new System.Drawing.Point(102, 175);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 5;
             // 
-            // button1
+            // buttonPrethodna
             // 
-            this.button1.Location = new System.Drawing.Point(12, 356);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Prethodna";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonPrethodna.Location = new System.Drawing.Point(3, 3);
+            this.buttonPrethodna.Name = "buttonPrethodna";
+            this.buttonPrethodna.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrethodna.TabIndex = 6;
+            this.buttonPrethodna.Text = "Prethodna";
+            this.buttonPrethodna.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonSljedeca
             // 
-            this.button2.Location = new System.Drawing.Point(127, 356);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Sljedeća";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSljedeca.Location = new System.Drawing.Point(84, 3);
+            this.buttonSljedeca.Name = "buttonSljedeca";
+            this.buttonSljedeca.Size = new System.Drawing.Size(75, 23);
+            this.buttonSljedeca.TabIndex = 7;
+            this.buttonSljedeca.Text = "Sljedeća";
+            this.buttonSljedeca.UseVisualStyleBackColor = true;
             // 
             // checkBoxTelefon
             // 
             this.checkBoxTelefon.AutoSize = true;
-            this.checkBoxTelefon.Location = new System.Drawing.Point(102, 56);
+            this.checkBoxTelefon.Location = new System.Drawing.Point(102, 37);
             this.checkBoxTelefon.Name = "checkBoxTelefon";
             this.checkBoxTelefon.Size = new System.Drawing.Size(62, 17);
             this.checkBoxTelefon.TabIndex = 8;
             this.checkBoxTelefon.Text = "Telefon";
             this.checkBoxTelefon.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonZatvori
             // 
-            this.button3.Location = new System.Drawing.Point(499, 356);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Zatvori";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonZatvori.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonZatvori.Location = new System.Drawing.Point(122, 3);
+            this.buttonZatvori.Name = "buttonZatvori";
+            this.buttonZatvori.Size = new System.Drawing.Size(75, 23);
+            this.buttonZatvori.TabIndex = 9;
+            this.buttonZatvori.Text = "Zatvori";
+            this.buttonZatvori.UseVisualStyleBackColor = true;
+            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
             // 
             // checkBoxTV
             // 
             this.checkBoxTV.AutoSize = true;
-            this.checkBoxTV.Location = new System.Drawing.Point(102, 79);
+            this.checkBoxTV.Location = new System.Drawing.Point(102, 60);
             this.checkBoxTV.Name = "checkBoxTV";
             this.checkBoxTV.Size = new System.Drawing.Size(40, 17);
             this.checkBoxTV.TabIndex = 10;
@@ -137,7 +148,7 @@
             // checkBoxKlima
             // 
             this.checkBoxKlima.AutoSize = true;
-            this.checkBoxKlima.Location = new System.Drawing.Point(102, 102);
+            this.checkBoxKlima.Location = new System.Drawing.Point(102, 83);
             this.checkBoxKlima.Name = "checkBoxKlima";
             this.checkBoxKlima.Size = new System.Drawing.Size(51, 17);
             this.checkBoxKlima.TabIndex = 11;
@@ -147,7 +158,7 @@
             // checkBoxKupaonica
             // 
             this.checkBoxKupaonica.AutoSize = true;
-            this.checkBoxKupaonica.Location = new System.Drawing.Point(102, 125);
+            this.checkBoxKupaonica.Location = new System.Drawing.Point(102, 106);
             this.checkBoxKupaonica.Name = "checkBoxKupaonica";
             this.checkBoxKupaonica.Size = new System.Drawing.Size(113, 17);
             this.checkBoxKupaonica.TabIndex = 12;
@@ -157,7 +168,7 @@
             // checkBoxMiniBar
             // 
             this.checkBoxMiniBar.AutoSize = true;
-            this.checkBoxMiniBar.Location = new System.Drawing.Point(102, 148);
+            this.checkBoxMiniBar.Location = new System.Drawing.Point(102, 129);
             this.checkBoxMiniBar.Name = "checkBoxMiniBar";
             this.checkBoxMiniBar.Size = new System.Drawing.Size(63, 17);
             this.checkBoxMiniBar.TabIndex = 13;
@@ -167,37 +178,80 @@
             // checkBoxPogled
             // 
             this.checkBoxPogled.AutoSize = true;
-            this.checkBoxPogled.Location = new System.Drawing.Point(102, 171);
+            this.checkBoxPogled.Location = new System.Drawing.Point(102, 152);
             this.checkBoxPogled.Name = "checkBoxPogled";
             this.checkBoxPogled.Size = new System.Drawing.Size(100, 17);
             this.checkBoxPogled.TabIndex = 14;
             this.checkBoxPogled.Text = "Pogled na more";
             this.checkBoxPogled.UseVisualStyleBackColor = true;
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxPogled);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxMiniBar);
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxKupaonica);
+            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxKlima);
+            this.splitContainer1.Panel1.Controls.Add(this.textBox3);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxTV);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBoxTelefon);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel2);
+            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer1.Size = new System.Drawing.Size(599, 400);
+            this.splitContainer1.SplitterDistance = 350;
+            this.splitContainer1.TabIndex = 15;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.buttonPrethodna);
+            this.flowLayoutPanel1.Controls.Add(this.buttonSljedeca);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 46);
+            this.flowLayoutPanel1.TabIndex = 10;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.buttonZatvori);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(399, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 46);
+            this.flowLayoutPanel2.TabIndex = 11;
+            // 
             // PregledajSobe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.buttonZatvori;
             this.ClientSize = new System.Drawing.Size(599, 400);
-            this.Controls.Add(this.checkBoxPogled);
-            this.Controls.Add(this.checkBoxMiniBar);
-            this.Controls.Add(this.checkBoxKupaonica);
-            this.Controls.Add(this.checkBoxKlima);
-            this.Controls.Add(this.checkBoxTV);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.checkBoxTelefon);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "PregledajSobe";
             this.Text = "Pregledaj sobe";
             this.Load += new System.EventHandler(this.PregledajSobe_Load);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -208,14 +262,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonPrethodna;
+        private System.Windows.Forms.Button buttonSljedeca;
         private System.Windows.Forms.CheckBox checkBoxTelefon;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonZatvori;
         private System.Windows.Forms.CheckBox checkBoxTV;
         private System.Windows.Forms.CheckBox checkBoxKlima;
         private System.Windows.Forms.CheckBox checkBoxKupaonica;
         private System.Windows.Forms.CheckBox checkBoxMiniBar;
         private System.Windows.Forms.CheckBox checkBoxPogled;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

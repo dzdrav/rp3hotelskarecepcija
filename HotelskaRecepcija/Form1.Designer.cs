@@ -31,20 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownSobe = new System.Windows.Forms.ToolStripDropDownButton();
-            this.pregledajDostupneSobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervirajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledajDostupneSobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.dodajNovogGostaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.pogledajRasporedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajRačunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajRačunToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajPredračunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.naplatiUsluguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovuUsluguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dodajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.pogledajRasporedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,8 +65,8 @@
             // 
             this.toolStripDropDownSobe.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownSobe.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rezervirajNovuSobuToolStripMenuItem,
             this.pregledajDostupneSobeToolStripMenuItem,
+            this.rezervirajNovuSobuToolStripMenuItem,
             this.dodajNovuSobuToolStripMenuItem});
             this.toolStripDropDownSobe.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownSobe.Image")));
             this.toolStripDropDownSobe.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -74,11 +74,24 @@
             this.toolStripDropDownSobe.Size = new System.Drawing.Size(46, 22);
             this.toolStripDropDownSobe.Text = "Sobe";
             // 
+            // rezervirajNovuSobuToolStripMenuItem
+            // 
+            this.rezervirajNovuSobuToolStripMenuItem.Name = "rezervirajNovuSobuToolStripMenuItem";
+            this.rezervirajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.rezervirajNovuSobuToolStripMenuItem.Text = "Rezerviraj noćenje";
+            // 
             // pregledajDostupneSobeToolStripMenuItem
             // 
             this.pregledajDostupneSobeToolStripMenuItem.Name = "pregledajDostupneSobeToolStripMenuItem";
             this.pregledajDostupneSobeToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.pregledajDostupneSobeToolStripMenuItem.Text = "Pregledaj dostupne sobe";
+            this.pregledajDostupneSobeToolStripMenuItem.Click += new System.EventHandler(this.pregledajDostupneSobeToolStripMenuItem_Click);
+            // 
+            // dodajNovuSobuToolStripMenuItem
+            // 
+            this.dodajNovuSobuToolStripMenuItem.Name = "dodajNovuSobuToolStripMenuItem";
+            this.dodajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.dodajNovuSobuToolStripMenuItem.Text = "Dodaj novu sobu";
             // 
             // toolStripDropDownButton2
             // 
@@ -93,18 +106,6 @@
             this.toolStripDropDownButton2.Size = new System.Drawing.Size(47, 22);
             this.toolStripDropDownButton2.Text = "Gosti";
             // 
-            // popisGostijuToolStripMenuItem
-            // 
-            this.popisGostijuToolStripMenuItem.Name = "popisGostijuToolStripMenuItem";
-            this.popisGostijuToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.popisGostijuToolStripMenuItem.Text = "Popis gostiju";
-            // 
-            // rezervirajNovuSobuToolStripMenuItem
-            // 
-            this.rezervirajNovuSobuToolStripMenuItem.Name = "rezervirajNovuSobuToolStripMenuItem";
-            this.rezervirajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.rezervirajNovuSobuToolStripMenuItem.Text = "Rezerviraj noćenje";
-            // 
             // dodajNovogGostaToolStripMenuItem
             // 
             this.dodajNovogGostaToolStripMenuItem.Name = "dodajNovogGostaToolStripMenuItem";
@@ -112,34 +113,11 @@
             this.dodajNovogGostaToolStripMenuItem.Text = "Dodaj novog gosta";
             this.dodajNovogGostaToolStripMenuItem.Click += new System.EventHandler(this.dodajNovogGostaToolStripMenuItem_Click);
             // 
-            // toolStripDropDownButton1
+            // popisGostijuToolStripMenuItem
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.naplatiUsluguToolStripMenuItem,
-            this.dodajNovuUsluguToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(56, 22);
-            this.toolStripDropDownButton1.Text = "Usluge";
-            // 
-            // toolStripDropDownButton3
-            // 
-            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pogledajRasporedToolStripMenuItem});
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(80, 22);
-            this.toolStripDropDownButton3.Text = "Zaposlenici";
-            // 
-            // pogledajRasporedToolStripMenuItem
-            // 
-            this.pogledajRasporedToolStripMenuItem.Name = "pogledajRasporedToolStripMenuItem";
-            this.pogledajRasporedToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.pogledajRasporedToolStripMenuItem.Text = "Pogledaj raspored";
+            this.popisGostijuToolStripMenuItem.Name = "popisGostijuToolStripMenuItem";
+            this.popisGostijuToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.popisGostijuToolStripMenuItem.Text = "Popis gostiju";
             // 
             // izdajRačunToolStripMenuItem
             // 
@@ -162,6 +140,18 @@
             this.izdajPredračunToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.izdajPredračunToolStripMenuItem.Text = "Izdaj predračun";
             // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.naplatiUsluguToolStripMenuItem,
+            this.dodajNovuUsluguToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(56, 22);
+            this.toolStripDropDownButton1.Text = "Usluge";
+            // 
             // naplatiUsluguToolStripMenuItem
             // 
             this.naplatiUsluguToolStripMenuItem.Name = "naplatiUsluguToolStripMenuItem";
@@ -174,11 +164,22 @@
             this.dodajNovuUsluguToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.dodajNovuUsluguToolStripMenuItem.Text = "Dodaj novu uslugu";
             // 
-            // dodajNovuSobuToolStripMenuItem
+            // toolStripDropDownButton3
             // 
-            this.dodajNovuSobuToolStripMenuItem.Name = "dodajNovuSobuToolStripMenuItem";
-            this.dodajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.dodajNovuSobuToolStripMenuItem.Text = "Dodaj novu sobu";
+            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pogledajRasporedToolStripMenuItem});
+            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
+            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(80, 22);
+            this.toolStripDropDownButton3.Text = "Zaposlenici";
+            // 
+            // pogledajRasporedToolStripMenuItem
+            // 
+            this.pogledajRasporedToolStripMenuItem.Name = "pogledajRasporedToolStripMenuItem";
+            this.pogledajRasporedToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.pogledajRasporedToolStripMenuItem.Text = "Pogledaj raspored";
             // 
             // Homepage
             // 

@@ -21,5 +21,10 @@ namespace HotelskaRecepcija
         {
 
         }
+
+        private void buttonZatvori_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
