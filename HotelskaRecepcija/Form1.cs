@@ -26,5 +26,11 @@ namespace HotelskaRecepcija
         {
 
         }
+
+        private void pogledajRasporedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RasporedOsoblja raspored = new RasporedOsoblja();
+            raspored.ShowDialog();
+        }
     }
 }
