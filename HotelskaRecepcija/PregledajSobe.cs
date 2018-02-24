@@ -15,19 +15,13 @@ using System.Windows.Forms;
 namespace HotelskaRecepcija
 {
     public partial class PregledajSobe : Form
-    {        
+    {       
+        private SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HR_Database.mdf;" +
+                "Integrated Security=True");
         public PregledajSobe()
         {
             InitializeComponent();
-            /*
-            //String myConnString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HR_Database.mdf;Integrated Security=True";
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HR_Database.mdf;" +
-                "Integrated Security=True");
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "select * from HR_SOBE";
             conn.Open();
-
-            cmd.Connection = conn;*/
         }
 
         private void PregledajSobe_Load(object sender, EventArgs e)
@@ -38,6 +32,7 @@ namespace HotelskaRecepcija
 
         private void buttonZatvori_Click(object sender, EventArgs e)
         {
+            conn.Close();
             this.Close();
         }
 
@@ -73,6 +68,86 @@ namespace HotelskaRecepcija
                 telefonCheckBox.Enabled = false;
             }
             
+        }
+
+        private void ButtonProvjeriDostupnost_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand
+                {
+                    CommandText = "select * from HR_SOBE",
+                    Connection = conn
+                };
+                SqlDataAdapter myAdapter = new SqlDataAdapter();
+                myAdapter.SelectCommand = cmd;
+                DataSet dataSet = new DataSet();
+                
+                myAdapter.Fill(dataSet, "HR_SOBE");
+                DataTable mojaTablica = dataSet.Tables[0];
+                DataRow redak = mojaTablica.Rows[0];
+                textBoxDatum.Text = redak["CIJENA_NOCENJA"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                //throw;
+            }            
+        }
+
+        private void buttonBirajDatum_Click(object sender, EventArgs e)
+        {
+            if (!monthCalendar1.Visible)
+            {
+                monthCalendar1.Visible = true;
+                buttonBirajDatum.Text = "Zatvori kalendar";
+            }
+            else
+            {
+                monthCalendar1.Visible = false;
+                buttonBirajDatum.Text = "Biraj datum";
+                buttonRezerviraj.Enabled = true;
+            }
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            try
+            {
+                // pretpostavit ćemo da je soba slobodna dok ne nađemo rezervaciju
+                buttonRezerviraj.Enabled = true;
+                // SQL upit
+                SqlCommand cmd = new SqlCommand
+                {
+                    CommandText = "select GOST_ID, SOBA_ID, DATUM from HR_NOCENJA",
+                    Connection = conn
+                };
+                SqlDataAdapter myAdapter = new SqlDataAdapter();
+                myAdapter.SelectCommand = cmd;
+                DataSet dataSet = new DataSet();
+
+                // TODO KASNIJE UKLONITI DRUGI ARGUMENT I PROVJERITI RADI LI BEZ TOGA
+                myAdapter.Fill(dataSet);
+                DataTable mojaTablica = dataSet.Tables[0];
+                // provjeri nalazi li se trenutna soba na trenutni datum u HR_NOCENJA
+                textBoxDatum.Text = "Prvi id: " + mojaTablica.Rows[0]["SOBA_ID"].ToString()
+                    + " na datum " + mojaTablica.Rows[0]["DATUM"].ToString();
+                foreach (DataRow redak in mojaTablica.Rows)
+                {
+                    if (redak["SOBA_ID"].ToString() == idTextBox.Text)
+                    {
+                        if (redak["DATUM"].ToString() == monthCalendar1.SelectionRange.Start.ToString())
+                        {
+                            buttonRezerviraj.Enabled = false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                //throw;
+            }
         }
     }
 }

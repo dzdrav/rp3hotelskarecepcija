@@ -83,7 +83,7 @@
             // 
             this.rezervirajNovuSobuToolStripMenuItem.Name = "rezervirajNovuSobuToolStripMenuItem";
             this.rezervirajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.rezervirajNovuSobuToolStripMenuItem.Text = "Rezerviraj noćenje";
+            this.rezervirajNovuSobuToolStripMenuItem.Text = "Pregled rezervacija";
             // 
             // toolStripDropDownButton2
             // 
