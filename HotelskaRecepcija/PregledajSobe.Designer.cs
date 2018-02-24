@@ -34,18 +34,23 @@
             System.Windows.Forms.Label cIJENA_NOCENJALabel;
             System.Windows.Forms.Label kATLabel;
             System.Windows.Forms.Label aPARTMANLabel;
-            this.buttonPrethodna = new System.Windows.Forms.Button();
-            this.buttonSljedeca = new System.Windows.Forms.Button();
+            System.Windows.Forms.Label pOGLEDLabel;
+            System.Windows.Forms.Label kupaonicaLabel;
+            System.Windows.Forms.Label klimaLabel;
+            System.Windows.Forms.Label minibarLabel;
+            System.Windows.Forms.Label tvLabel;
+            System.Windows.Forms.Label telefonLabel;
             this.buttonZatvori = new System.Windows.Forms.Button();
             this.splitContainerBody = new System.Windows.Forms.SplitContainer();
             this.splitContainerUpper = new System.Windows.Forms.SplitContainer();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBoxKarakteristike = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.hR_DatabaseDataSet = new HotelskaRecepcija.HR_DatabaseDataSet();
+            this.hR_DatabaseDataSet1 = new HotelskaRecepcija.HR_DatabaseDataSet1();
             this.hR_SOBEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hR_SOBETableAdapter = new HotelskaRecepcija.HR_DatabaseDataSetTableAdapters.HR_SOBETableAdapter();
-            this.tableAdapterManager = new HotelskaRecepcija.HR_DatabaseDataSetTableAdapters.TableAdapterManager();
+            this.hR_SOBETableAdapter = new HotelskaRecepcija.HR_DatabaseDataSet1TableAdapters.HR_SOBETableAdapter();
+            this.tableAdapterManager = new HotelskaRecepcija.HR_DatabaseDataSet1TableAdapters.TableAdapterManager();
             this.hR_SOBEBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -63,46 +68,37 @@
             this.cIJENA_NOCENJATextBox = new System.Windows.Forms.TextBox();
             this.kATTextBox = new System.Windows.Forms.TextBox();
             this.aPARTMANCheckBox = new System.Windows.Forms.CheckBox();
-            this.hRKARAKTSOBABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hR_KARAKT_SOBATableAdapter = new HotelskaRecepcija.HR_DatabaseDataSetTableAdapters.HR_KARAKT_SOBATableAdapter();
+            this.pOGLEDCheckBox = new System.Windows.Forms.CheckBox();
+            this.kupaonicaCheckBox = new System.Windows.Forms.CheckBox();
+            this.klimaCheckBox = new System.Windows.Forms.CheckBox();
+            this.minibarCheckBox = new System.Windows.Forms.CheckBox();
+            this.tvCheckBox = new System.Windows.Forms.CheckBox();
+            this.telefonCheckBox = new System.Windows.Forms.CheckBox();
             idLabel = new System.Windows.Forms.Label();
             cIJENA_NOCENJALabel = new System.Windows.Forms.Label();
             kATLabel = new System.Windows.Forms.Label();
             aPARTMANLabel = new System.Windows.Forms.Label();
+            pOGLEDLabel = new System.Windows.Forms.Label();
+            kupaonicaLabel = new System.Windows.Forms.Label();
+            klimaLabel = new System.Windows.Forms.Label();
+            minibarLabel = new System.Windows.Forms.Label();
+            tvLabel = new System.Windows.Forms.Label();
+            telefonLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerBody)).BeginInit();
             this.splitContainerBody.Panel1.SuspendLayout();
             this.splitContainerBody.Panel2.SuspendLayout();
             this.splitContainerBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerUpper)).BeginInit();
+            this.splitContainerUpper.Panel1.SuspendLayout();
             this.splitContainerUpper.Panel2.SuspendLayout();
             this.splitContainerUpper.SuspendLayout();
             this.groupBoxKarakteristike.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hR_DatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hR_DatabaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hR_SOBEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hR_SOBEBindingNavigator)).BeginInit();
             this.hR_SOBEBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hRKARAKTSOBABindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonPrethodna
-            // 
-            this.buttonPrethodna.Location = new System.Drawing.Point(3, 3);
-            this.buttonPrethodna.Name = "buttonPrethodna";
-            this.buttonPrethodna.Size = new System.Drawing.Size(75, 23);
-            this.buttonPrethodna.TabIndex = 6;
-            this.buttonPrethodna.Text = "Prethodna";
-            this.buttonPrethodna.UseVisualStyleBackColor = true;
-            // 
-            // buttonSljedeca
-            // 
-            this.buttonSljedeca.Location = new System.Drawing.Point(84, 3);
-            this.buttonSljedeca.Name = "buttonSljedeca";
-            this.buttonSljedeca.Size = new System.Drawing.Size(75, 23);
-            this.buttonSljedeca.TabIndex = 7;
-            this.buttonSljedeca.Text = "Sljedeća";
-            this.buttonSljedeca.UseVisualStyleBackColor = true;
             // 
             // buttonZatvori
             // 
@@ -141,12 +137,24 @@
             this.splitContainerUpper.Name = "splitContainerUpper";
             this.splitContainerUpper.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
+            // splitContainerUpper.Panel1
+            // 
+            this.splitContainerUpper.Panel1.Controls.Add(this.hR_SOBEBindingNavigator);
+            // 
             // splitContainerUpper.Panel2
             // 
+            this.splitContainerUpper.Panel2.Controls.Add(this.textBox1);
             this.splitContainerUpper.Panel2.Controls.Add(this.groupBoxKarakteristike);
             this.splitContainerUpper.Size = new System.Drawing.Size(599, 350);
             this.splitContainerUpper.SplitterDistance = 32;
             this.splitContainerUpper.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(328, 53);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 9;
             // 
             // groupBoxKarakteristike
             // 
@@ -158,6 +166,18 @@
             this.groupBoxKarakteristike.Controls.Add(this.kATTextBox);
             this.groupBoxKarakteristike.Controls.Add(aPARTMANLabel);
             this.groupBoxKarakteristike.Controls.Add(this.aPARTMANCheckBox);
+            this.groupBoxKarakteristike.Controls.Add(pOGLEDLabel);
+            this.groupBoxKarakteristike.Controls.Add(this.pOGLEDCheckBox);
+            this.groupBoxKarakteristike.Controls.Add(kupaonicaLabel);
+            this.groupBoxKarakteristike.Controls.Add(this.kupaonicaCheckBox);
+            this.groupBoxKarakteristike.Controls.Add(klimaLabel);
+            this.groupBoxKarakteristike.Controls.Add(this.klimaCheckBox);
+            this.groupBoxKarakteristike.Controls.Add(minibarLabel);
+            this.groupBoxKarakteristike.Controls.Add(this.minibarCheckBox);
+            this.groupBoxKarakteristike.Controls.Add(tvLabel);
+            this.groupBoxKarakteristike.Controls.Add(this.tvCheckBox);
+            this.groupBoxKarakteristike.Controls.Add(telefonLabel);
+            this.groupBoxKarakteristike.Controls.Add(this.telefonCheckBox);
             this.groupBoxKarakteristike.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBoxKarakteristike.Location = new System.Drawing.Point(0, 0);
             this.groupBoxKarakteristike.Name = "groupBoxKarakteristike";
@@ -178,23 +198,21 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.buttonPrethodna);
-            this.flowLayoutPanel1.Controls.Add(this.buttonSljedeca);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 46);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
-            // hR_DatabaseDataSet
+            // hR_DatabaseDataSet1
             // 
-            this.hR_DatabaseDataSet.DataSetName = "HR_DatabaseDataSet";
-            this.hR_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.hR_DatabaseDataSet1.DataSetName = "HR_DatabaseDataSet1";
+            this.hR_DatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // hR_SOBEBindingSource
             // 
             this.hR_SOBEBindingSource.DataMember = "HR_SOBE";
-            this.hR_SOBEBindingSource.DataSource = this.hR_DatabaseDataSet;
+            this.hR_SOBEBindingSource.DataSource = this.hR_DatabaseDataSet1;
             // 
             // hR_SOBETableAdapter
             // 
@@ -204,14 +222,13 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.HR_GOSTITableAdapter = null;
-            this.tableAdapterManager.HR_KARAKT_SOBATableAdapter = this.hR_KARAKT_SOBATableAdapter;
             this.tableAdapterManager.HR_NOCENJATableAdapter = null;
             this.tableAdapterManager.HR_RACUNITableAdapter = null;
             this.tableAdapterManager.HR_SOBETableAdapter = this.hR_SOBETableAdapter;
             this.tableAdapterManager.HR_USLUGETableAdapter = null;
             this.tableAdapterManager.HR_VRSTE_KARAKTTableAdapter = null;
             this.tableAdapterManager.HR_VRSTE_USLUGATableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = HotelskaRecepcija.HR_DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = HotelskaRecepcija.HR_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // hR_SOBEBindingNavigator
             // 
@@ -219,6 +236,7 @@
             this.hR_SOBEBindingNavigator.BindingSource = this.hR_SOBEBindingSource;
             this.hR_SOBEBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.hR_SOBEBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.hR_SOBEBindingNavigator.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hR_SOBEBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -239,7 +257,7 @@
             this.hR_SOBEBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.hR_SOBEBindingNavigator.Name = "hR_SOBEBindingNavigator";
             this.hR_SOBEBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.hR_SOBEBindingNavigator.Size = new System.Drawing.Size(599, 25);
+            this.hR_SOBEBindingNavigator.Size = new System.Drawing.Size(599, 32);
             this.hR_SOBEBindingNavigator.TabIndex = 16;
             this.hR_SOBEBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -316,7 +334,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 29);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorDeleteItem
@@ -340,7 +358,7 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(12, 31);
+            idLabel.Location = new System.Drawing.Point(12, 16);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
             idLabel.TabIndex = 0;
@@ -349,7 +367,7 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hR_SOBEBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(118, 28);
+            this.idTextBox.Location = new System.Drawing.Point(118, 13);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(104, 20);
             this.idTextBox.TabIndex = 1;
@@ -357,7 +375,7 @@
             // cIJENA_NOCENJALabel
             // 
             cIJENA_NOCENJALabel.AutoSize = true;
-            cIJENA_NOCENJALabel.Location = new System.Drawing.Point(12, 57);
+            cIJENA_NOCENJALabel.Location = new System.Drawing.Point(12, 42);
             cIJENA_NOCENJALabel.Name = "cIJENA_NOCENJALabel";
             cIJENA_NOCENJALabel.Size = new System.Drawing.Size(100, 13);
             cIJENA_NOCENJALabel.TabIndex = 2;
@@ -366,7 +384,7 @@
             // cIJENA_NOCENJATextBox
             // 
             this.cIJENA_NOCENJATextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hR_SOBEBindingSource, "CIJENA_NOCENJA", true));
-            this.cIJENA_NOCENJATextBox.Location = new System.Drawing.Point(118, 54);
+            this.cIJENA_NOCENJATextBox.Location = new System.Drawing.Point(118, 39);
             this.cIJENA_NOCENJATextBox.Name = "cIJENA_NOCENJATextBox";
             this.cIJENA_NOCENJATextBox.Size = new System.Drawing.Size(104, 20);
             this.cIJENA_NOCENJATextBox.TabIndex = 3;
@@ -374,7 +392,7 @@
             // kATLabel
             // 
             kATLabel.AutoSize = true;
-            kATLabel.Location = new System.Drawing.Point(12, 83);
+            kATLabel.Location = new System.Drawing.Point(12, 68);
             kATLabel.Name = "kATLabel";
             kATLabel.Size = new System.Drawing.Size(31, 13);
             kATLabel.TabIndex = 4;
@@ -383,7 +401,7 @@
             // kATTextBox
             // 
             this.kATTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hR_SOBEBindingSource, "KAT", true));
-            this.kATTextBox.Location = new System.Drawing.Point(118, 80);
+            this.kATTextBox.Location = new System.Drawing.Point(118, 65);
             this.kATTextBox.Name = "kATTextBox";
             this.kATTextBox.Size = new System.Drawing.Size(104, 20);
             this.kATTextBox.TabIndex = 5;
@@ -391,7 +409,7 @@
             // aPARTMANLabel
             // 
             aPARTMANLabel.AutoSize = true;
-            aPARTMANLabel.Location = new System.Drawing.Point(12, 111);
+            aPARTMANLabel.Location = new System.Drawing.Point(12, 96);
             aPARTMANLabel.Name = "aPARTMANLabel";
             aPARTMANLabel.Size = new System.Drawing.Size(70, 13);
             aPARTMANLabel.TabIndex = 6;
@@ -399,23 +417,127 @@
             // 
             // aPARTMANCheckBox
             // 
-            this.aPARTMANCheckBox.AutoSize = true;
             this.aPARTMANCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.hR_SOBEBindingSource, "APARTMAN", true));
-            this.aPARTMANCheckBox.Location = new System.Drawing.Point(118, 106);
+            this.aPARTMANCheckBox.Location = new System.Drawing.Point(118, 91);
             this.aPARTMANCheckBox.Name = "aPARTMANCheckBox";
-            this.aPARTMANCheckBox.Size = new System.Drawing.Size(109, 17);
+            this.aPARTMANCheckBox.Size = new System.Drawing.Size(104, 24);
             this.aPARTMANCheckBox.TabIndex = 7;
-            this.aPARTMANCheckBox.Text = "Soba je apartman";
+            this.aPARTMANCheckBox.Text = "checkBox1";
             this.aPARTMANCheckBox.UseVisualStyleBackColor = true;
             // 
-            // hRKARAKTSOBABindingSource
+            // pOGLEDLabel
             // 
-            this.hRKARAKTSOBABindingSource.DataMember = "HR_KARAKT_SOBA";
-            this.hRKARAKTSOBABindingSource.DataSource = this.hR_DatabaseDataSet;
+            pOGLEDLabel.AutoSize = true;
+            pOGLEDLabel.Location = new System.Drawing.Point(12, 126);
+            pOGLEDLabel.Name = "pOGLEDLabel";
+            pOGLEDLabel.Size = new System.Drawing.Size(54, 13);
+            pOGLEDLabel.TabIndex = 8;
+            pOGLEDLabel.Text = "POGLED:";
             // 
-            // hR_KARAKT_SOBATableAdapter
+            // pOGLEDCheckBox
             // 
-            this.hR_KARAKT_SOBATableAdapter.ClearBeforeFill = true;
+            this.pOGLEDCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.hR_SOBEBindingSource, "POGLED", true));
+            this.pOGLEDCheckBox.Location = new System.Drawing.Point(118, 121);
+            this.pOGLEDCheckBox.Name = "pOGLEDCheckBox";
+            this.pOGLEDCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.pOGLEDCheckBox.TabIndex = 9;
+            this.pOGLEDCheckBox.Text = "checkBox1";
+            this.pOGLEDCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // kupaonicaLabel
+            // 
+            kupaonicaLabel.AutoSize = true;
+            kupaonicaLabel.Location = new System.Drawing.Point(12, 156);
+            kupaonicaLabel.Name = "kupaonicaLabel";
+            kupaonicaLabel.Size = new System.Drawing.Size(60, 13);
+            kupaonicaLabel.TabIndex = 10;
+            kupaonicaLabel.Text = "kupaonica:";
+            // 
+            // kupaonicaCheckBox
+            // 
+            this.kupaonicaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.hR_SOBEBindingSource, "kupaonica", true));
+            this.kupaonicaCheckBox.Location = new System.Drawing.Point(118, 151);
+            this.kupaonicaCheckBox.Name = "kupaonicaCheckBox";
+            this.kupaonicaCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.kupaonicaCheckBox.TabIndex = 11;
+            this.kupaonicaCheckBox.Text = "checkBox1";
+            this.kupaonicaCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // klimaLabel
+            // 
+            klimaLabel.AutoSize = true;
+            klimaLabel.Location = new System.Drawing.Point(12, 186);
+            klimaLabel.Name = "klimaLabel";
+            klimaLabel.Size = new System.Drawing.Size(34, 13);
+            klimaLabel.TabIndex = 12;
+            klimaLabel.Text = "klima:";
+            // 
+            // klimaCheckBox
+            // 
+            this.klimaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.hR_SOBEBindingSource, "klima", true));
+            this.klimaCheckBox.Location = new System.Drawing.Point(118, 181);
+            this.klimaCheckBox.Name = "klimaCheckBox";
+            this.klimaCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.klimaCheckBox.TabIndex = 13;
+            this.klimaCheckBox.Text = "checkBox1";
+            this.klimaCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // minibarLabel
+            // 
+            minibarLabel.AutoSize = true;
+            minibarLabel.Location = new System.Drawing.Point(12, 216);
+            minibarLabel.Name = "minibarLabel";
+            minibarLabel.Size = new System.Drawing.Size(43, 13);
+            minibarLabel.TabIndex = 14;
+            minibarLabel.Text = "minibar:";
+            // 
+            // minibarCheckBox
+            // 
+            this.minibarCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.hR_SOBEBindingSource, "minibar", true));
+            this.minibarCheckBox.Location = new System.Drawing.Point(118, 211);
+            this.minibarCheckBox.Name = "minibarCheckBox";
+            this.minibarCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.minibarCheckBox.TabIndex = 15;
+            this.minibarCheckBox.Text = "checkBox1";
+            this.minibarCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // tvLabel
+            // 
+            tvLabel.AutoSize = true;
+            tvLabel.Location = new System.Drawing.Point(12, 246);
+            tvLabel.Name = "tvLabel";
+            tvLabel.Size = new System.Drawing.Size(19, 13);
+            tvLabel.TabIndex = 16;
+            tvLabel.Text = "tv:";
+            // 
+            // tvCheckBox
+            // 
+            this.tvCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.hR_SOBEBindingSource, "tv", true));
+            this.tvCheckBox.Location = new System.Drawing.Point(118, 241);
+            this.tvCheckBox.Name = "tvCheckBox";
+            this.tvCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.tvCheckBox.TabIndex = 17;
+            this.tvCheckBox.Text = "checkBox1";
+            this.tvCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // telefonLabel
+            // 
+            telefonLabel.AutoSize = true;
+            telefonLabel.Location = new System.Drawing.Point(12, 276);
+            telefonLabel.Name = "telefonLabel";
+            telefonLabel.Size = new System.Drawing.Size(42, 13);
+            telefonLabel.TabIndex = 18;
+            telefonLabel.Text = "telefon:";
+            // 
+            // telefonCheckBox
+            // 
+            this.telefonCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.hR_SOBEBindingSource, "telefon", true));
+            this.telefonCheckBox.Location = new System.Drawing.Point(118, 271);
+            this.telefonCheckBox.Name = "telefonCheckBox";
+            this.telefonCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.telefonCheckBox.TabIndex = 19;
+            this.telefonCheckBox.Text = "checkBox1";
+            this.telefonCheckBox.UseVisualStyleBackColor = true;
             // 
             // PregledajSobe
             // 
@@ -423,7 +545,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonZatvori;
             this.ClientSize = new System.Drawing.Size(599, 400);
-            this.Controls.Add(this.hR_SOBEBindingNavigator);
             this.Controls.Add(this.splitContainerBody);
             this.Name = "PregledajSobe";
             this.Text = "Pregledaj sobe";
@@ -432,37 +553,36 @@
             this.splitContainerBody.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerBody)).EndInit();
             this.splitContainerBody.ResumeLayout(false);
+            this.splitContainerUpper.Panel1.ResumeLayout(false);
+            this.splitContainerUpper.Panel1.PerformLayout();
             this.splitContainerUpper.Panel2.ResumeLayout(false);
+            this.splitContainerUpper.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerUpper)).EndInit();
             this.splitContainerUpper.ResumeLayout(false);
             this.groupBoxKarakteristike.ResumeLayout(false);
             this.groupBoxKarakteristike.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.hR_DatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hR_DatabaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hR_SOBEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hR_SOBEBindingNavigator)).EndInit();
             this.hR_SOBEBindingNavigator.ResumeLayout(false);
             this.hR_SOBEBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hRKARAKTSOBABindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonPrethodna;
-        private System.Windows.Forms.Button buttonSljedeca;
         private System.Windows.Forms.Button buttonZatvori;
         private System.Windows.Forms.SplitContainer splitContainerBody;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.SplitContainer splitContainerUpper;
         private System.Windows.Forms.GroupBox groupBoxKarakteristike;
-        private HR_DatabaseDataSet hR_DatabaseDataSet;
+        private System.Windows.Forms.TextBox textBox1;
+        private HR_DatabaseDataSet1 hR_DatabaseDataSet1;
         private System.Windows.Forms.BindingSource hR_SOBEBindingSource;
-        private HR_DatabaseDataSetTableAdapters.HR_SOBETableAdapter hR_SOBETableAdapter;
-        private HR_DatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private HR_DatabaseDataSet1TableAdapters.HR_SOBETableAdapter hR_SOBETableAdapter;
+        private HR_DatabaseDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator hR_SOBEBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -480,7 +600,11 @@
         private System.Windows.Forms.TextBox cIJENA_NOCENJATextBox;
         private System.Windows.Forms.TextBox kATTextBox;
         private System.Windows.Forms.CheckBox aPARTMANCheckBox;
-        private HR_DatabaseDataSetTableAdapters.HR_KARAKT_SOBATableAdapter hR_KARAKT_SOBATableAdapter;
-        private System.Windows.Forms.BindingSource hRKARAKTSOBABindingSource;
+        private System.Windows.Forms.CheckBox pOGLEDCheckBox;
+        private System.Windows.Forms.CheckBox kupaonicaCheckBox;
+        private System.Windows.Forms.CheckBox klimaCheckBox;
+        private System.Windows.Forms.CheckBox minibarCheckBox;
+        private System.Windows.Forms.CheckBox tvCheckBox;
+        private System.Windows.Forms.CheckBox telefonCheckBox;
     }
 }

@@ -31,9 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownSobe = new System.Windows.Forms.ToolStripDropDownButton();
-            this.rezervirajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledajDostupneSobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dodajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rezervirajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.dodajNovogGostaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,19 +65,12 @@
             this.toolStripDropDownSobe.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownSobe.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pregledajDostupneSobeToolStripMenuItem,
-            this.rezervirajNovuSobuToolStripMenuItem,
-            this.dodajNovuSobuToolStripMenuItem});
+            this.rezervirajNovuSobuToolStripMenuItem});
             this.toolStripDropDownSobe.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownSobe.Image")));
             this.toolStripDropDownSobe.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownSobe.Name = "toolStripDropDownSobe";
             this.toolStripDropDownSobe.Size = new System.Drawing.Size(46, 22);
             this.toolStripDropDownSobe.Text = "Sobe";
-            // 
-            // rezervirajNovuSobuToolStripMenuItem
-            // 
-            this.rezervirajNovuSobuToolStripMenuItem.Name = "rezervirajNovuSobuToolStripMenuItem";
-            this.rezervirajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.rezervirajNovuSobuToolStripMenuItem.Text = "Rezerviraj noćenje";
             // 
             // pregledajDostupneSobeToolStripMenuItem
             // 
@@ -87,11 +79,11 @@
             this.pregledajDostupneSobeToolStripMenuItem.Text = "Pregledaj dostupne sobe";
             this.pregledajDostupneSobeToolStripMenuItem.Click += new System.EventHandler(this.pregledajDostupneSobeToolStripMenuItem_Click);
             // 
-            // dodajNovuSobuToolStripMenuItem
+            // rezervirajNovuSobuToolStripMenuItem
             // 
-            this.dodajNovuSobuToolStripMenuItem.Name = "dodajNovuSobuToolStripMenuItem";
-            this.dodajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.dodajNovuSobuToolStripMenuItem.Text = "Dodaj novu sobu";
+            this.rezervirajNovuSobuToolStripMenuItem.Name = "rezervirajNovuSobuToolStripMenuItem";
+            this.rezervirajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.rezervirajNovuSobuToolStripMenuItem.Text = "Rezerviraj noćenje";
             // 
             // toolStripDropDownButton2
             // 
@@ -213,7 +205,6 @@
         private System.Windows.Forms.ToolStripMenuItem dodajNovuUsluguToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.ToolStripMenuItem pogledajRasporedToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dodajNovuSobuToolStripMenuItem;
     }
 }
 
