@@ -72,27 +72,58 @@ namespace HotelskaRecepcija
 
         private void ButtonProvjeriDostupnost_Click(object sender, EventArgs e)
         {
-            try
+            if (monthCalendar1.Visible)
             {
-                SqlCommand cmd = new SqlCommand
+                bool slobodna = true;
+                try
                 {
-                    CommandText = "select * from HR_SOBE",
-                    Connection = conn
-                };
-                SqlDataAdapter myAdapter = new SqlDataAdapter();
-                myAdapter.SelectCommand = cmd;
-                DataSet dataSet = new DataSet();
-                
-                myAdapter.Fill(dataSet, "HR_SOBE");
-                DataTable mojaTablica = dataSet.Tables[0];
-                DataRow redak = mojaTablica.Rows[0];
-                textBoxDatum.Text = redak["CIJENA_NOCENJA"].ToString();
+                    // SQL upit
+                    SqlCommand cmd = new SqlCommand
+                    {
+                        CommandText = "select GOST_ID, SOBA_ID, DATUM from HR_NOCENJA",
+                        Connection = conn
+                    };
+                    SqlDataAdapter myAdapter = new SqlDataAdapter();
+                    myAdapter.SelectCommand = cmd;
+                    DataSet dataSet = new DataSet();
+
+                    // popunjavanje dataset-a
+                    myAdapter.Fill(dataSet);
+                    DataTable mojaTablica = dataSet.Tables[0];
+
+                    // provjeri nalazi li se trenutna soba na odabrani datum u HR_NOCENJA
+                    textBoxDatum.Text = "Prvi id: " + mojaTablica.Rows[0]["SOBA_ID"].ToString()
+                        + " na datum " + mojaTablica.Rows[0]["DATUM"].ToString();
+                    foreach (DataRow redak in mojaTablica.Rows)
+                    {
+                        if (redak["SOBA_ID"].ToString() == idTextBox.Text)
+                        {
+                            if (redak["DATUM"].ToString() == monthCalendar1.SelectionRange.Start.ToString())
+                            {
+                                buttonRezerviraj.Enabled = false;
+                                labelDostupnost.Text = "Soba je zauzeta";
+                                labelDostupnost.ForeColor = Color.DarkRed;
+                                slobodna = false;
+                            }
+                        }
+                    }
+                    if (slobodna)
+                    {
+                        buttonRezerviraj.Enabled = true;
+                        labelDostupnost.Text = "Soba je slobodna";
+                        labelDostupnost.ForeColor = Color.DarkGreen;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-                //throw;
-            }            
+                MessageBox.Show("Morate izabrati datum");
+            }
+                     
         }
 
         private void buttonBirajDatum_Click(object sender, EventArgs e)
@@ -116,38 +147,17 @@ namespace HotelskaRecepcija
             {
                 // pretpostavit ćemo da je soba slobodna dok ne nađemo rezervaciju
                 buttonRezerviraj.Enabled = true;
-                // SQL upit
-                SqlCommand cmd = new SqlCommand
-                {
-                    CommandText = "select GOST_ID, SOBA_ID, DATUM from HR_NOCENJA",
-                    Connection = conn
-                };
-                SqlDataAdapter myAdapter = new SqlDataAdapter();
-                myAdapter.SelectCommand = cmd;
-                DataSet dataSet = new DataSet();
-
-                // TODO KASNIJE UKLONITI DRUGI ARGUMENT I PROVJERITI RADI LI BEZ TOGA
-                myAdapter.Fill(dataSet);
-                DataTable mojaTablica = dataSet.Tables[0];
-                // provjeri nalazi li se trenutna soba na trenutni datum u HR_NOCENJA
-                textBoxDatum.Text = "Prvi id: " + mojaTablica.Rows[0]["SOBA_ID"].ToString()
-                    + " na datum " + mojaTablica.Rows[0]["DATUM"].ToString();
-                foreach (DataRow redak in mojaTablica.Rows)
-                {
-                    if (redak["SOBA_ID"].ToString() == idTextBox.Text)
-                    {
-                        if (redak["DATUM"].ToString() == monthCalendar1.SelectionRange.Start.ToString())
-                        {
-                            buttonRezerviraj.Enabled = false;
-                        }
-                    }
-                }
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                //throw;
             }
+        }
+
+        private void buttonRezerviraj_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
