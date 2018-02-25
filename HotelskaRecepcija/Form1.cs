@@ -56,5 +56,29 @@ namespace HotelskaRecepcija
             
 
         }
+
+        private void popisUslugaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrikazUsluga usluge = new PrikazUsluga();
+            usluge.ShowDialog();
+        }
+
+        private void rezervacijaUslugeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RezervirajUslugu usluga = new RezervirajUslugu();
+            usluga.ShowDialog();
+        }
+
+        private void naplatiUsluguToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            NaplatiUslugu usluga = new NaplatiUslugu();
+            usluga.ShowDialog();
+        }
+
+        private void popisRezerviranihUslugaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RezerviraneUsluge usluge = new RezerviraneUsluge();
+            usluge.ShowDialog();
+        }
     }
 }
