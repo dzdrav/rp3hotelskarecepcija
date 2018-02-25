@@ -92,6 +92,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.HR_GOSTITableAdapter = this.hR_GOSTITableAdapter;
             this.tableAdapterManager.HR_NOCENJATableAdapter = null;
+            this.tableAdapterManager.HR_OSOBLJETableAdapter = null;
             this.tableAdapterManager.HR_RACUNITableAdapter = null;
             this.tableAdapterManager.HR_SOBETableAdapter = null;
             this.tableAdapterManager.HR_USLUGETableAdapter = null;
@@ -133,6 +134,7 @@
             // bindingNavigatorAddNewItem
             // 
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Enabled = false;
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
@@ -149,6 +151,7 @@
             // bindingNavigatorDeleteItem
             // 
             this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Enabled = false;
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
@@ -218,6 +221,7 @@
             // hR_GOSTIBindingNavigatorSaveItem
             // 
             this.hR_GOSTIBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.hR_GOSTIBindingNavigatorSaveItem.Enabled = false;
             this.hR_GOSTIBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("hR_GOSTIBindingNavigatorSaveItem.Image")));
             this.hR_GOSTIBindingNavigatorSaveItem.Name = "hR_GOSTIBindingNavigatorSaveItem";
             this.hR_GOSTIBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 28);
@@ -226,6 +230,8 @@
             // 
             // hR_GOSTIDataGridView
             // 
+            this.hR_GOSTIDataGridView.AllowUserToAddRows = false;
+            this.hR_GOSTIDataGridView.AllowUserToDeleteRows = false;
             this.hR_GOSTIDataGridView.AutoGenerateColumns = false;
             this.hR_GOSTIDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hR_GOSTIDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -236,6 +242,7 @@
             this.hR_GOSTIDataGridView.DataSource = this.hR_GOSTIBindingSource;
             this.hR_GOSTIDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hR_GOSTIDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.hR_GOSTIDataGridView.MultiSelect = false;
             this.hR_GOSTIDataGridView.Name = "hR_GOSTIDataGridView";
             this.hR_GOSTIDataGridView.ReadOnly = true;
             this.hR_GOSTIDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -256,18 +263,21 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "ime";
             this.dataGridViewTextBoxColumn2.HeaderText = "ime";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "prezime";
             this.dataGridViewTextBoxColumn3.HeaderText = "prezime";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "SPOL";
             this.dataGridViewTextBoxColumn4.HeaderText = "SPOL";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // splitContainer1
             // 

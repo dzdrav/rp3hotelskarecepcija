@@ -24,8 +24,10 @@ namespace HotelskaRecepcija
 
         private void dodajNovogGostaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DodajNovogGostaForm novaForma = new DodajNovogGostaForm();
-            novaForma.ShowDialog();
+            DodajNovogGostaForm noviGost = new DodajNovogGostaForm();
+            noviGost.ShowDialog();
+
+           
         }
 
         private void pogledajRasporedToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,6 +82,12 @@ namespace HotelskaRecepcija
         {
             RezerviraneUsluge usluge = new RezerviraneUsluge();
             usluge.ShowDialog();
+        }
+
+        private void rezervirajNovuSobuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PregledNocenja novaForma = new PregledNocenja();
+            novaForma.Show();
         }
 
         private void popisGostijuToolStripMenuItem_Click(object sender, EventArgs e)

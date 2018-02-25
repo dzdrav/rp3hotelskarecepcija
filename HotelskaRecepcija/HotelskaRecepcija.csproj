@@ -100,7 +100,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HR_DatabaseDataSet11.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NaplatiUslugu.cs" />
+    <Compile Include="NaplatiUslugu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NaplatiUslugu.Designer.cs">
       <DependentUpon>NaplatiUslugu.cs</DependentUpon>
     </Compile>
@@ -121,6 +123,12 @@
     </Compile>
     <Compile Include="PregledajSobe.Designer.cs">
       <DependentUpon>PregledajSobe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PregledNocenja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PregledNocenja.Designer.cs">
+      <DependentUpon>PregledNocenja.cs</DependentUpon>
     </Compile>
     <Compile Include="PrikazUsluga.cs">
       <SubType>Form</SubType>
@@ -175,6 +183,9 @@
     <EmbeddedResource Include="PregledajSobe.resx">
       <DependentUpon>PregledajSobe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PregledNocenja.resx">
+      <DependentUpon>PregledNocenja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrikazUsluga.resx">
       <DependentUpon>PrikazUsluga.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +197,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RasporedOsoblja.resx">
       <DependentUpon>RasporedOsoblja.cs</DependentUpon>
@@ -251,6 +263,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>HR_Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\hotel_bg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
