@@ -80,5 +80,11 @@ namespace HotelskaRecepcija
             RezerviraneUsluge usluge = new RezerviraneUsluge();
             usluge.ShowDialog();
         }
+
+        private void rezervirajNovuSobuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PregledNocenja novaForma = new PregledNocenja();
+            novaForma.Show();
+        }
     }
 }

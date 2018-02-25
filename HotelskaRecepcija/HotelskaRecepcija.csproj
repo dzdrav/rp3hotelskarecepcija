@@ -116,6 +116,12 @@
     <Compile Include="PregledajSobe.Designer.cs">
       <DependentUpon>PregledajSobe.cs</DependentUpon>
     </Compile>
+    <Compile Include="PregledNocenja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PregledNocenja.Designer.cs">
+      <DependentUpon>PregledNocenja.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrikazUsluga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PregledajSobe.resx">
       <DependentUpon>PregledajSobe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PregledNocenja.resx">
+      <DependentUpon>PregledNocenja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrikazUsluga.resx">
       <DependentUpon>PrikazUsluga.cs</DependentUpon>
