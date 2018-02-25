@@ -43,11 +43,11 @@
             this.popisUslugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervacijaUslugeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.naplatiUsluguToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.popisRezerviranihUslugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.pogledajRasporedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajZaposlenikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoZaduženjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.popisRezerviranihUslugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,6 +115,7 @@
             this.popisGostijuToolStripMenuItem.Name = "popisGostijuToolStripMenuItem";
             this.popisGostijuToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.popisGostijuToolStripMenuItem.Text = "Popis gostiju";
+            this.popisGostijuToolStripMenuItem.Click += new System.EventHandler(this.popisGostijuToolStripMenuItem_Click);
             // 
             // izdajRačunToolStripMenuItem
             // 
@@ -154,23 +155,30 @@
             // popisUslugaToolStripMenuItem
             // 
             this.popisUslugaToolStripMenuItem.Name = "popisUslugaToolStripMenuItem";
-            this.popisUslugaToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.popisUslugaToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
             this.popisUslugaToolStripMenuItem.Text = "Popis svih usluga";
             this.popisUslugaToolStripMenuItem.Click += new System.EventHandler(this.popisUslugaToolStripMenuItem_Click);
             // 
             // rezervacijaUslugeToolStripMenuItem
             // 
             this.rezervacijaUslugeToolStripMenuItem.Name = "rezervacijaUslugeToolStripMenuItem";
-            this.rezervacijaUslugeToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.rezervacijaUslugeToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
             this.rezervacijaUslugeToolStripMenuItem.Text = "Rezervacija usluge";
             this.rezervacijaUslugeToolStripMenuItem.Click += new System.EventHandler(this.rezervacijaUslugeToolStripMenuItem_Click);
             // 
             // naplatiUsluguToolStripMenuItem1
             // 
             this.naplatiUsluguToolStripMenuItem1.Name = "naplatiUsluguToolStripMenuItem1";
-            this.naplatiUsluguToolStripMenuItem1.Size = new System.Drawing.Size(206, 26);
+            this.naplatiUsluguToolStripMenuItem1.Size = new System.Drawing.Size(247, 26);
             this.naplatiUsluguToolStripMenuItem1.Text = "Naplati uslugu";
             this.naplatiUsluguToolStripMenuItem1.Click += new System.EventHandler(this.naplatiUsluguToolStripMenuItem1_Click);
+            // 
+            // popisRezerviranihUslugaToolStripMenuItem
+            // 
+            this.popisRezerviranihUslugaToolStripMenuItem.Name = "popisRezerviranihUslugaToolStripMenuItem";
+            this.popisRezerviranihUslugaToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.popisRezerviranihUslugaToolStripMenuItem.Text = "Popis rezerviranih usluga";
+            this.popisRezerviranihUslugaToolStripMenuItem.Click += new System.EventHandler(this.popisRezerviranihUslugaToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton3
             // 
@@ -205,13 +213,6 @@
             this.novoZaduženjeToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.novoZaduženjeToolStripMenuItem.Text = "Novo zaduženje";
             this.novoZaduženjeToolStripMenuItem.Click += new System.EventHandler(this.novoZaduženjeToolStripMenuItem_Click);
-            // 
-            // popisRezerviranihUslugaToolStripMenuItem
-            // 
-            this.popisRezerviranihUslugaToolStripMenuItem.Name = "popisRezerviranihUslugaToolStripMenuItem";
-            this.popisRezerviranihUslugaToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
-            this.popisRezerviranihUslugaToolStripMenuItem.Text = "Popis rezerviranih usluga";
-            this.popisRezerviranihUslugaToolStripMenuItem.Click += new System.EventHandler(this.popisRezerviranihUslugaToolStripMenuItem_Click);
             // 
             // Homepage
             // 
