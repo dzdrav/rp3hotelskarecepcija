@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BirajKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BirajKorisnika.Designer.cs">
+      <DependentUpon>BirajKorisnika.cs</DependentUpon>
+    </Compile>
     <Compile Include="DodajNovogGostaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HR_DatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HR_DatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HR_DatabaseDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HR_DatabaseDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="novoZaduzenje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +120,9 @@
     <Compile Include="RasporedOsoblja.Designer.cs">
       <DependentUpon>RasporedOsoblja.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BirajKorisnika.resx">
+      <DependentUpon>BirajKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DodajNovogGostaForm.resx">
       <DependentUpon>DodajNovogGostaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +153,28 @@
     <EmbeddedResource Include="RasporedOsoblja.resx">
       <DependentUpon>RasporedOsoblja.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="HR_DatabaseDataSet1.xsc">
+      <DependentUpon>HR_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HR_DatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HR_DatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HR_DatabaseDataSet1.xss">
+      <DependentUpon>HR_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HR_DatabaseDataSet11.xsc">
+      <DependentUpon>HR_DatabaseDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="HR_DatabaseDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HR_DatabaseDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HR_DatabaseDataSet11.xss">
+      <DependentUpon>HR_DatabaseDataSet11.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

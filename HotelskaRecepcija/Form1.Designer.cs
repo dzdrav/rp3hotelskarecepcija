@@ -35,9 +35,9 @@
             this.pregledajDostupneSobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rezervirajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //this.rezervirajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovogGostaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajRačunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajRačunToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajPredračunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,9 +98,9 @@
             // 
             // dodajNovuSobuToolStripMenuItem
             // 
-            this.dodajNovuSobuToolStripMenuItem.Name = "dodajNovuSobuToolStripMenuItem";
-            this.dodajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
-            this.dodajNovuSobuToolStripMenuItem.Text = "Dodaj novu sobu";
+            //this.dodajNovuSobuToolStripMenuItem.Name = "dodajNovuSobuToolStripMenuItem";
+            //this.dodajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            //this.dodajNovuSobuToolStripMenuItem.Text = "Dodaj novu sobu";
             // 
             // toolStripDropDownButton2
             // 
