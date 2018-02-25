@@ -32,7 +32,7 @@ namespace HotelskaRecepcija
                 SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\HR_database.mdf;Integrated Security=True");
                 con.Open();
 
-                string update = " UPDATE OSOBLJE SET Zaduženje=@zaduzenje, " +
+                string update = " UPDATE HR_OSOBLJE SET Zaduženje=@zaduzenje, " +
                     " Početak=@pocetak, " + " Kraj=@kraj, " + " Smjena=@smjena WHERE Ime=@ime AND Prezime=@prezime";
                 SqlCommand cmd = new SqlCommand(update, con);
 

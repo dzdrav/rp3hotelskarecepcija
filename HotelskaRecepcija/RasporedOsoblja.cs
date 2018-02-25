@@ -40,7 +40,7 @@ namespace HotelskaRecepcija
             try
             {
                 SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\HR_Database.mdf;Integrated Security=True");
-                SqlDataAdapter sda = new SqlDataAdapter("Select * from Osoblje", con);
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * from HR_OSOBLJE", con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 BindingSource bSource = new BindingSource();
@@ -74,9 +74,5 @@ namespace HotelskaRecepcija
         }
 
 
-        private void RasporedOsoblja_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
