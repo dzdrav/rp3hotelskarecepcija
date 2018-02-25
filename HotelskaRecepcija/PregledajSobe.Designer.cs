@@ -380,6 +380,7 @@
             this.textBoxDatum.Name = "textBoxDatum";
             this.textBoxDatum.Size = new System.Drawing.Size(100, 20);
             this.textBoxDatum.TabIndex = 11;
+            this.textBoxDatum.Text = "Datum nije izabran";
             // 
             // labelDostupnost
             // 
