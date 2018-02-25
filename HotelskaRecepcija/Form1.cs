@@ -32,5 +32,11 @@ namespace HotelskaRecepcija
             PregledajSobe novaForma = new PregledajSobe();
             novaForma.Show();
         }
+
+        private void hR_NOCENJABindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }

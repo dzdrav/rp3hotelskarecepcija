@@ -16,12 +16,16 @@ namespace HotelskaRecepcija
 {
     public partial class PregledajSobe : Form
     {
-        private SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HR_Database.mdf;" +
+        private string m_connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HR_Database.mdf;" +
+                "Integrated Security=True";
+        private SqlConnection m_conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HR_Database.mdf;" +
                 "Integrated Security=True");
+        
+        // konstruktor
         public PregledajSobe()
         {
             InitializeComponent();
-            conn.Open();
+            m_conn.Open();
         }
         //svojstvo za spremanje u textboxOdabraniGost
         public string OdabraniGost
@@ -36,9 +40,10 @@ namespace HotelskaRecepcija
             this.hR_SOBETableAdapter.Fill(this.hR_DatabaseDataSet1.HR_SOBE);
         }
 
+        // gumb zatvori
         private void buttonZatvori_Click(object sender, EventArgs e)
         {
-            conn.Close();
+            m_conn.Close();
             this.Close();
         }
 
@@ -49,6 +54,7 @@ namespace HotelskaRecepcija
             this.tableAdapterManager.UpdateAll(this.hR_DatabaseDataSet1);
         }
 
+        // jesu li dozvoljene promjene nad sobama
         private void checkBoxDozvoliPromjene_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxDozvoliPromjene.Checked)
@@ -76,18 +82,21 @@ namespace HotelskaRecepcija
             
         }
 
+        // provjerava dostupnost odabrane sobe na odabrani datum
         private void ButtonProvjeriDostupnost_Click(object sender, EventArgs e)
         {
             if (monthCalendar1.Visible)
             {
-                bool slobodna = true;
                 try
                 {
+                    // pretpostavimo da je slobodna pa idemo u 'obaranje' pretpostavke
+                    bool slobodna = true;
                     // SQL upit
+                    // TODO - razmotri pretvaranje konekcije na bazu pomoću 'using' klauzule
                     SqlCommand cmd = new SqlCommand
                     {
                         CommandText = "select GOST_ID, SOBA_ID, DATUM from HR_NOCENJA",
-                        Connection = conn
+                        Connection = m_conn
                     };
                     SqlDataAdapter myAdapter = new SqlDataAdapter();
                     myAdapter.SelectCommand = cmd;
@@ -97,22 +106,21 @@ namespace HotelskaRecepcija
                     myAdapter.Fill(dataSet);
                     DataTable mojaTablica = dataSet.Tables[0];
 
-                    // provjeri nalazi li se trenutna soba na odabrani datum u HR_NOCENJA
-                    //textBoxDatum.Text = "Prvi id: " + mojaTablica.Rows[0]["SOBA_ID"].ToString()
-                        //+ " na datum " + mojaTablica.Rows[0]["DATUM"].ToString();
+                    // je li odabrana soba zauzeta na odabrani datum
                     foreach (DataRow redak in mojaTablica.Rows)
                     {
                         if (redak["SOBA_ID"].ToString() == idTextBox.Text)
                         {
                             if (redak["DATUM"].ToString() == monthCalendar1.SelectionRange.Start.ToString())
                             {
-                                buttonRezerviraj.Enabled = false;
+                                // ako nađe, dakle soba je zauzeta na taj datum
                                 labelDostupnost.Text = "Soba je zauzeta";
                                 labelDostupnost.ForeColor = Color.DarkRed;
                                 slobodna = false;
                             }
                         }
                     }
+                    // ako nije zauzeta, onda je slobodna i rezervacija je moguća
                     if (slobodna)
                     {
                         buttonRezerviraj.Enabled = true;
@@ -132,6 +140,7 @@ namespace HotelskaRecepcija
                      
         }
 
+        // prikazuje/skriva skočni kalendar
         private void buttonBirajDatum_Click(object sender, EventArgs e)
         {
             if (!monthCalendar1.Visible)
@@ -143,37 +152,56 @@ namespace HotelskaRecepcija
             {
                 monthCalendar1.Visible = false;
                 buttonBirajDatum.Text = "Biraj datum";
-                buttonRezerviraj.Enabled = true;
+                buttonRezerviraj.Enabled = false;
                 labelDostupnost.Text = "Dostupnost sobe";
                 labelDostupnost.ForeColor = Color.Black;
             }
         }
 
-        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        // rezervira sobu danom korisniku na izabrani datum 
+        private void buttonRezerviraj_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection openCon = new SqlConnection(m_connectionString))
+            {
+                string query = "INSERT INTO hr_nocenja (GOST_ID, SOBA_ID, DATUM, CIJENA) " +
+                    "VALUES (@gostid, @sobaid, @datum, @cijena)";
+                using (SqlCommand querySaveStaff = new SqlCommand(query))
+                {
+                    querySaveStaff.Connection = openCon;
+                    // parametrizacija kao zaštita od SQL injectiona
+                    querySaveStaff.Parameters.AddWithValue("@gostid", Int32.Parse(textBoxOdabraniGost.Text));
+                    querySaveStaff.Parameters.AddWithValue("@sobaid", Int32.Parse(idTextBox.Text));
+                    querySaveStaff.Parameters.AddWithValue("@datum", DateTime.Parse(textBoxDatum.Text));                    
+                    querySaveStaff.Parameters.AddWithValue("@cijena", Convert.ToDecimal(cIJENA_NOCENJATextBox.Text));
+                    openCon.Open();
+                    querySaveStaff.ExecuteNonQuery();
+                    MessageBox.Show("Rezervacija obavljena");
+                }
+            }            
+        }
+
+        // stvara formu za biranje gosta
+        private void buttonBirajGosta_Click(object sender, EventArgs e)
+        {
+            BirajGosta forma = new BirajGosta(this);
+            forma.ShowDialog();
+        }
+
+        // pretpostavit ćemo da je soba zauzeta dok ne provjerimo
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
             try
             {
-                // pretpostavit ćemo da je soba slobodna dok ne nađemo rezervaciju
-                buttonRezerviraj.Enabled = true;
+                buttonRezerviraj.Enabled = false;
                 textBoxDatum.Text = monthCalendar1.SelectionStart.ToString();
-                
+                labelDostupnost.Text = "Dostupnost sobe";
+                labelDostupnost.ForeColor = Color.Black;
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void buttonRezerviraj_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonBirajGosta_Click(object sender, EventArgs e)
-        {
-            BirajGosta forma = new BirajGosta(this);
-            forma.ShowDialog();
-            //forma.DialogResult.
         }
     }
 }
