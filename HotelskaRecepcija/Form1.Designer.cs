@@ -31,23 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownSobe = new System.Windows.Forms.ToolStripDropDownButton();
-            this.rezervirajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledajDostupneSobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rezervirajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            //this.rezervirajNovuSobuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovogGostaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            //this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajRačunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajRačunToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajPredračunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.naplatiUsluguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dodajNovuUsluguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.popisUslugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rezervacijaUslugeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.naplatiUsluguToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.pogledajRasporedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajZaposlenikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoZaduženjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.popisRezerviranihUslugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,12 +77,6 @@
             this.toolStripDropDownSobe.Size = new System.Drawing.Size(57, 24);
             this.toolStripDropDownSobe.Text = "Sobe";
             // 
-            // rezervirajNovuSobuToolStripMenuItem
-            // 
-            this.rezervirajNovuSobuToolStripMenuItem.Name = "rezervirajNovuSobuToolStripMenuItem";
-            this.rezervirajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
-            this.rezervirajNovuSobuToolStripMenuItem.Text = "Rezerviraj noćenje";
-            // 
             // pregledajDostupneSobeToolStripMenuItem
             // 
             this.pregledajDostupneSobeToolStripMenuItem.Name = "pregledajDostupneSobeToolStripMenuItem";
@@ -93,14 +87,8 @@
             // rezervirajNovuSobuToolStripMenuItem
             // 
             this.rezervirajNovuSobuToolStripMenuItem.Name = "rezervirajNovuSobuToolStripMenuItem";
-            this.rezervirajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.rezervirajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
             this.rezervirajNovuSobuToolStripMenuItem.Text = "Pregled rezervacija";
-            // 
-            // dodajNovuSobuToolStripMenuItem
-            // 
-            //this.dodajNovuSobuToolStripMenuItem.Name = "dodajNovuSobuToolStripMenuItem";
-            //this.dodajNovuSobuToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
-            //this.dodajNovuSobuToolStripMenuItem.Text = "Dodaj novu sobu";
             // 
             // toolStripDropDownButton2
             // 
@@ -149,29 +137,40 @@
             this.izdajPredračunToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.izdajPredračunToolStripMenuItem.Text = "Izdaj predračun";
             // 
-            // popisGostijuToolStripMenuItem
+            // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.naplatiUsluguToolStripMenuItem,
-            this.dodajNovuUsluguToolStripMenuItem});
+            this.popisUslugaToolStripMenuItem,
+            this.rezervacijaUslugeToolStripMenuItem,
+            this.naplatiUsluguToolStripMenuItem1,
+            this.popisRezerviranihUslugaToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(68, 24);
             this.toolStripDropDownButton1.Text = "Usluge";
             // 
-            // naplatiUsluguToolStripMenuItem
+            // popisUslugaToolStripMenuItem
             // 
-            this.naplatiUsluguToolStripMenuItem.Name = "naplatiUsluguToolStripMenuItem";
-            this.naplatiUsluguToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
-            this.naplatiUsluguToolStripMenuItem.Text = "Naplati uslugu";
+            this.popisUslugaToolStripMenuItem.Name = "popisUslugaToolStripMenuItem";
+            this.popisUslugaToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.popisUslugaToolStripMenuItem.Text = "Popis svih usluga";
+            this.popisUslugaToolStripMenuItem.Click += new System.EventHandler(this.popisUslugaToolStripMenuItem_Click);
             // 
-            // dodajNovuUsluguToolStripMenuItem
+            // rezervacijaUslugeToolStripMenuItem
             // 
-            this.dodajNovuUsluguToolStripMenuItem.Name = "dodajNovuUsluguToolStripMenuItem";
-            this.dodajNovuUsluguToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
-            this.dodajNovuUsluguToolStripMenuItem.Text = "Dodaj novu uslugu";
+            this.rezervacijaUslugeToolStripMenuItem.Name = "rezervacijaUslugeToolStripMenuItem";
+            this.rezervacijaUslugeToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.rezervacijaUslugeToolStripMenuItem.Text = "Rezervacija usluge";
+            this.rezervacijaUslugeToolStripMenuItem.Click += new System.EventHandler(this.rezervacijaUslugeToolStripMenuItem_Click);
+            // 
+            // naplatiUsluguToolStripMenuItem1
+            // 
+            this.naplatiUsluguToolStripMenuItem1.Name = "naplatiUsluguToolStripMenuItem1";
+            this.naplatiUsluguToolStripMenuItem1.Size = new System.Drawing.Size(206, 26);
+            this.naplatiUsluguToolStripMenuItem1.Text = "Naplati uslugu";
+            this.naplatiUsluguToolStripMenuItem1.Click += new System.EventHandler(this.naplatiUsluguToolStripMenuItem1_Click);
             // 
             // toolStripDropDownButton3
             // 
@@ -189,7 +188,7 @@
             // pogledajRasporedToolStripMenuItem
             // 
             this.pogledajRasporedToolStripMenuItem.Name = "pogledajRasporedToolStripMenuItem";
-            this.pogledajRasporedToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.pogledajRasporedToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.pogledajRasporedToolStripMenuItem.Text = "Pogledaj raspored";
             this.pogledajRasporedToolStripMenuItem.Click += new System.EventHandler(this.pogledajRasporedToolStripMenuItem_Click);
             // 
@@ -206,6 +205,13 @@
             this.novoZaduženjeToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.novoZaduženjeToolStripMenuItem.Text = "Novo zaduženje";
             this.novoZaduženjeToolStripMenuItem.Click += new System.EventHandler(this.novoZaduženjeToolStripMenuItem_Click);
+            // 
+            // popisRezerviranihUslugaToolStripMenuItem
+            // 
+            this.popisRezerviranihUslugaToolStripMenuItem.Name = "popisRezerviranihUslugaToolStripMenuItem";
+            this.popisRezerviranihUslugaToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.popisRezerviranihUslugaToolStripMenuItem.Text = "Popis rezerviranih usluga";
+            this.popisRezerviranihUslugaToolStripMenuItem.Click += new System.EventHandler(this.popisRezerviranihUslugaToolStripMenuItem_Click);
             // 
             // Homepage
             // 
@@ -236,13 +242,15 @@
         private System.Windows.Forms.ToolStripMenuItem izdajRačunToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izdajRačunToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem izdajPredračunToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem naplatiUsluguToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dodajNovuUsluguToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem popisUslugaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rezervacijaUslugeToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.ToolStripMenuItem pogledajRasporedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajNovuSobuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajZaposlenikaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoZaduženjeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem naplatiUsluguToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem popisRezerviranihUslugaToolStripMenuItem;
     }
 }
 

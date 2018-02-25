@@ -100,6 +100,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HR_DatabaseDataSet11.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NaplatiUslugu.cs" />
+    <Compile Include="NaplatiUslugu.Designer.cs">
+      <DependentUpon>NaplatiUslugu.cs</DependentUpon>
+    </Compile>
     <Compile Include="novoZaduzenje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +116,12 @@
     <Compile Include="PregledajSobe.Designer.cs">
       <DependentUpon>PregledajSobe.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrikazUsluga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrikazUsluga.Designer.cs">
+      <DependentUpon>PrikazUsluga.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RasporedOsoblja.cs">
@@ -119,6 +129,18 @@
     </Compile>
     <Compile Include="RasporedOsoblja.Designer.cs">
       <DependentUpon>RasporedOsoblja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezervirajUslugu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezervirajUslugu.Designer.cs">
+      <DependentUpon>RezervirajUslugu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezerviraneUsluge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezerviraneUsluge.Designer.cs">
+      <DependentUpon>RezerviraneUsluge.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BirajKorisnika.resx">
       <DependentUpon>BirajKorisnika.cs</DependentUpon>
@@ -135,11 +157,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NaplatiUslugu.resx">
+      <DependentUpon>NaplatiUslugu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="novoZaduzenje.resx">
       <DependentUpon>novoZaduzenje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PregledajSobe.resx">
       <DependentUpon>PregledajSobe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrikazUsluga.resx">
+      <DependentUpon>PrikazUsluga.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,6 +180,12 @@
     </Compile>
     <EmbeddedResource Include="RasporedOsoblja.resx">
       <DependentUpon>RasporedOsoblja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezervirajUslugu.resx">
+      <DependentUpon>RezervirajUslugu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezerviraneUsluge.resx">
+      <DependentUpon>RezerviraneUsluge.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="HR_DatabaseDataSet1.xsc">
       <DependentUpon>HR_DatabaseDataSet1.xsd</DependentUpon>
