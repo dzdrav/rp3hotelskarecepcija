@@ -44,5 +44,17 @@ namespace HotelskaRecepcija
             novoZaduzenje zaduzenje = new novoZaduzenje();
             zaduzenje.ShowDialog();
         }
+
+        private void pregledajDostupneSobeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PregledajSobe novaForma = new PregledajSobe();
+            novaForma.Show();
+        }
+
+        private void hR_NOCENJABindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }
