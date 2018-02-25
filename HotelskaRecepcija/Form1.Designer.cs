@@ -48,7 +48,9 @@
             this.pogledajRasporedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajZaposlenikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoZaduženjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBoxBackground = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackground)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -61,7 +63,7 @@
             this.toolStripDropDownButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(576, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(686, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -214,16 +216,30 @@
             this.novoZaduženjeToolStripMenuItem.Text = "Novo zaduženje";
             this.novoZaduženjeToolStripMenuItem.Click += new System.EventHandler(this.novoZaduženjeToolStripMenuItem_Click);
             // 
+            // pictureBoxBackground
+            // 
+            this.pictureBoxBackground.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxBackground.Image = global::HotelskaRecepcija.Properties.Resources.hotel_bg;
+            this.pictureBoxBackground.Location = new System.Drawing.Point(0, 25);
+            this.pictureBoxBackground.Name = "pictureBoxBackground";
+            this.pictureBoxBackground.Size = new System.Drawing.Size(686, 391);
+            this.pictureBoxBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxBackground.TabIndex = 1;
+            this.pictureBoxBackground.TabStop = false;
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 440);
+            this.ClientSize = new System.Drawing.Size(686, 416);
+            this.Controls.Add(this.pictureBoxBackground);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Homepage";
             this.Text = "Home page";
+            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackground)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,6 +267,7 @@
         private System.Windows.Forms.ToolStripMenuItem novoZaduženjeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem naplatiUsluguToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem popisRezerviranihUslugaToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBoxBackground;
     }
 }
 
