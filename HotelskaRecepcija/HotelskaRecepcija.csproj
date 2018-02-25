@@ -72,11 +72,23 @@
     <Compile Include="DodajNovuSobu.Designer.cs">
       <DependentUpon>DodajNovuSobu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DodajZaposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajZaposlenika.Designer.cs">
+      <DependentUpon>DodajZaposlenika.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="novoZaduzenje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="novoZaduzenje.Designer.cs">
+      <DependentUpon>novoZaduzenje.cs</DependentUpon>
     </Compile>
     <Compile Include="PregledajSobe.cs">
       <SubType>Form</SubType>
@@ -98,8 +110,14 @@
     <EmbeddedResource Include="DodajNovuSobu.resx">
       <DependentUpon>DodajNovuSobu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DodajZaposlenika.resx">
+      <DependentUpon>DodajZaposlenika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="novoZaduzenje.resx">
+      <DependentUpon>novoZaduzenje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PregledajSobe.resx">
       <DependentUpon>PregledajSobe.cs</DependentUpon>

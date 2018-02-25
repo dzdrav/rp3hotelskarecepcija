@@ -25,7 +25,7 @@ namespace HotelskaRecepcija
                 SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\HR_database.mdf;Integrated Security=True");
                 con.Open();
 
-                string insert = "insert into OSOBLJE (Ime, Prezime, Zaduženje, Početak, Kraj, Smjena) values ('" + NovoIme.Text + "','" + NovoPrezime.Text + "','"
+                string insert = "insert into Osoblje (Ime, Prezime, Zaduženje, Početak, Kraj, Smjena) values ('" + NovoIme.Text + "','" + NovoPrezime.Text + "','"
                                                         + NovoZaduzenje.Text + "','" + pocetakNovog.Value.ToShortDateString() + "','" 
                                                         + krajNovog.Value.ToShortDateString() + "','" + smjenaNovog.Text + "')";
 

@@ -32,5 +32,17 @@ namespace HotelskaRecepcija
             RasporedOsoblja raspored = new RasporedOsoblja();
             raspored.ShowDialog();
         }
+
+        private void dodajZaposlenikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DodajZaposlenika zaposlenik = new DodajZaposlenika();
+            zaposlenik.ShowDialog();
+        }
+
+        private void novoZaduženjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            novoZaduzenje zaduzenje = new novoZaduzenje();
+            zaduzenje.ShowDialog();
+        }
     }
 }
