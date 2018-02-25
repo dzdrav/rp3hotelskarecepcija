@@ -45,6 +45,8 @@
             this.dodajNovuUsluguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.pogledajRasporedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajZaposlenikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoZaduženjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,7 +170,9 @@
             // 
             this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pogledajRasporedToolStripMenuItem});
+            this.pogledajRasporedToolStripMenuItem,
+            this.dodajZaposlenikaToolStripMenuItem,
+            this.novoZaduženjeToolStripMenuItem});
             this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
             this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
@@ -178,9 +182,23 @@
             // pogledajRasporedToolStripMenuItem
             // 
             this.pogledajRasporedToolStripMenuItem.Name = "pogledajRasporedToolStripMenuItem";
-            this.pogledajRasporedToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.pogledajRasporedToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.pogledajRasporedToolStripMenuItem.Text = "Pogledaj raspored";
             this.pogledajRasporedToolStripMenuItem.Click += new System.EventHandler(this.pogledajRasporedToolStripMenuItem_Click);
+            // 
+            // dodajZaposlenikaToolStripMenuItem
+            // 
+            this.dodajZaposlenikaToolStripMenuItem.Name = "dodajZaposlenikaToolStripMenuItem";
+            this.dodajZaposlenikaToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.dodajZaposlenikaToolStripMenuItem.Text = "Novi zaposlenik";
+            this.dodajZaposlenikaToolStripMenuItem.Click += new System.EventHandler(this.dodajZaposlenikaToolStripMenuItem_Click);
+            // 
+            // novoZaduženjeToolStripMenuItem
+            // 
+            this.novoZaduženjeToolStripMenuItem.Name = "novoZaduženjeToolStripMenuItem";
+            this.novoZaduženjeToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.novoZaduženjeToolStripMenuItem.Text = "Novo zaduženje";
+            this.novoZaduženjeToolStripMenuItem.Click += new System.EventHandler(this.novoZaduženjeToolStripMenuItem_Click);
             // 
             // Homepage
             // 
@@ -188,7 +206,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 542);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Homepage";
             this.Text = "Home page";
             this.toolStrip1.ResumeLayout(false);
@@ -216,6 +234,8 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.ToolStripMenuItem pogledajRasporedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajNovuSobuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajZaposlenikaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem novoZaduženjeToolStripMenuItem;
     }
 }
 

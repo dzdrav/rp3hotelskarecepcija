@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace HotelskaRecepcija
 {
-    public partial class DodajZaduzenje : Form
+    public partial class novoZaduzenje : Form
     {
-        public DodajZaduzenje()
+        public novoZaduzenje()
         {
             InitializeComponent();
         }
@@ -32,7 +32,11 @@ namespace HotelskaRecepcija
                 SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\HR_database.mdf;Integrated Security=True");
                 con.Open();
 
+<<<<<<< HEAD:HotelskaRecepcija/DodajZaduzenje.cs
                 string update = " UPDATE HR_OSOBLJE SET Zaduženje=@zaduzenje, " +
+=======
+                string update = " UPDATE Osoblje SET Zaduženje=@zaduzenje, " +
+>>>>>>> osoblje:HotelskaRecepcija/novoZaduzenje.cs
                     " Početak=@pocetak, " + " Kraj=@kraj, " + " Smjena=@smjena WHERE Ime=@ime AND Prezime=@prezime";
                 SqlCommand cmd = new SqlCommand(update, con);
 
@@ -45,7 +49,7 @@ namespace HotelskaRecepcija
 
                 DataTable dt = new DataTable();
                 SqlDataAdapter sda = new SqlDataAdapter();
-                
+
                 cmd.ExecuteNonQuery();
                 sda.Update(dt);
                 con.Close();
