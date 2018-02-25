@@ -73,9 +73,6 @@ namespace HotelskaRecepcija
 
         }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> osoblje
     }
 }
