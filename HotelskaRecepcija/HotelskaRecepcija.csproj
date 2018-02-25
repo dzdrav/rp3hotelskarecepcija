@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BirajKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BirajKorisnika.Designer.cs">
+      <DependentUpon>BirajKorisnika.cs</DependentUpon>
+    </Compile>
     <Compile Include="DodajNovogGostaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BirajKorisnika.resx">
+      <DependentUpon>BirajKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DodajNovogGostaForm.resx">
       <DependentUpon>DodajNovogGostaForm.cs</DependentUpon>
     </EmbeddedResource>

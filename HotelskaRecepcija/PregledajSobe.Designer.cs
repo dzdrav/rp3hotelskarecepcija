@@ -51,8 +51,14 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.hR_SOBEBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.textBoxDatum = new System.Windows.Forms.TextBox();
+            this.groupBoxRezervacije = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonProvjeriDostupnost = new System.Windows.Forms.Button();
+            this.textBoxDatum = new System.Windows.Forms.TextBox();
+            this.labelDostupnost = new System.Windows.Forms.Label();
+            this.buttonRezerviraj = new System.Windows.Forms.Button();
+            this.buttonBirajDatum = new System.Windows.Forms.Button();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.groupBoxKarakteristike = new System.Windows.Forms.GroupBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.cIJENA_NOCENJATextBox = new System.Windows.Forms.TextBox();
@@ -69,11 +75,8 @@
             this.checkBoxDozvoliPromjene = new System.Windows.Forms.CheckBox();
             this.hR_SOBETableAdapter = new HotelskaRecepcija.HR_DatabaseDataSet1TableAdapters.HR_SOBETableAdapter();
             this.tableAdapterManager = new HotelskaRecepcija.HR_DatabaseDataSet1TableAdapters.TableAdapterManager();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.buttonBirajDatum = new System.Windows.Forms.Button();
-            this.groupBoxRezervacije = new System.Windows.Forms.GroupBox();
-            this.labelDostupnost = new System.Windows.Forms.Label();
-            this.buttonRezerviraj = new System.Windows.Forms.Button();
+            this.buttonBirajGosta = new System.Windows.Forms.Button();
+            this.textBoxOdabraniGost = new System.Windows.Forms.TextBox();
             idLabel = new System.Windows.Forms.Label();
             cIJENA_NOCENJALabel = new System.Windows.Forms.Label();
             kATLabel = new System.Windows.Forms.Label();
@@ -89,10 +92,11 @@
             this.hR_SOBEBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hR_SOBEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hR_DatabaseDataSet1)).BeginInit();
+            this.groupBoxRezervacije.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.groupBoxKarakteristike.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.groupBoxRezervacije.SuspendLayout();
             this.SuspendLayout();
             // 
             // idLabel
@@ -148,8 +152,8 @@
             // 
             this.splitContainerBody.Panel2.Controls.Add(this.flowLayoutPanel2);
             this.splitContainerBody.Panel2.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainerBody.Size = new System.Drawing.Size(599, 400);
-            this.splitContainerBody.SplitterDistance = 350;
+            this.splitContainerBody.Size = new System.Drawing.Size(624, 409);
+            this.splitContainerBody.SplitterDistance = 357;
             this.splitContainerBody.TabIndex = 15;
             // 
             // splitContainerUpper
@@ -167,7 +171,7 @@
             // 
             this.splitContainerUpper.Panel2.Controls.Add(this.groupBoxRezervacije);
             this.splitContainerUpper.Panel2.Controls.Add(this.groupBoxKarakteristike);
-            this.splitContainerUpper.Size = new System.Drawing.Size(599, 350);
+            this.splitContainerUpper.Size = new System.Drawing.Size(624, 357);
             this.splitContainerUpper.SplitterDistance = 32;
             this.splitContainerUpper.TabIndex = 0;
             // 
@@ -198,7 +202,7 @@
             this.hR_SOBEBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.hR_SOBEBindingNavigator.Name = "hR_SOBEBindingNavigator";
             this.hR_SOBEBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.hR_SOBEBindingNavigator.Size = new System.Drawing.Size(599, 32);
+            this.hR_SOBEBindingNavigator.Size = new System.Drawing.Size(624, 32);
             this.hR_SOBEBindingNavigator.TabIndex = 16;
             this.hR_SOBEBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -306,23 +310,100 @@
             this.hR_SOBEBindingNavigatorSaveItem.Text = "Save Data";
             this.hR_SOBEBindingNavigatorSaveItem.Click += new System.EventHandler(this.hR_SOBEBindingNavigatorSaveItem_Click_1);
             // 
-            // textBoxDatum
+            // groupBoxRezervacije
             // 
-            this.textBoxDatum.Location = new System.Drawing.Point(6, 239);
-            this.textBoxDatum.Name = "textBoxDatum";
-            this.textBoxDatum.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDatum.TabIndex = 11;
+            this.groupBoxRezervacije.Controls.Add(this.tableLayoutPanel1);
+            this.groupBoxRezervacije.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxRezervacije.Location = new System.Drawing.Point(298, 0);
+            this.groupBoxRezervacije.Name = "groupBoxRezervacije";
+            this.groupBoxRezervacije.Size = new System.Drawing.Size(326, 321);
+            this.groupBoxRezervacije.TabIndex = 14;
+            this.groupBoxRezervacije.TabStop = false;
+            this.groupBoxRezervacije.Text = "Rezervacije";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.buttonProvjeriDostupnost, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.buttonBirajDatum, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxDatum, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelDostupnost, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.monthCalendar1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonRezerviraj, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.buttonBirajGosta, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxOdabraniGost, 1, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(320, 302);
+            this.tableLayoutPanel1.TabIndex = 15;
             // 
             // buttonProvjeriDostupnost
             // 
             this.buttonProvjeriDostupnost.AutoSize = true;
-            this.buttonProvjeriDostupnost.Location = new System.Drawing.Point(6, 22);
+            this.buttonProvjeriDostupnost.Location = new System.Drawing.Point(3, 210);
             this.buttonProvjeriDostupnost.Name = "buttonProvjeriDostupnost";
-            this.buttonProvjeriDostupnost.Size = new System.Drawing.Size(133, 23);
+            this.buttonProvjeriDostupnost.Size = new System.Drawing.Size(133, 24);
             this.buttonProvjeriDostupnost.TabIndex = 10;
             this.buttonProvjeriDostupnost.Text = "Provjeri dostupnost sobe";
             this.buttonProvjeriDostupnost.UseVisualStyleBackColor = true;
             this.buttonProvjeriDostupnost.Click += new System.EventHandler(this.ButtonProvjeriDostupnost_Click);
+            // 
+            // textBoxDatum
+            // 
+            this.textBoxDatum.Location = new System.Drawing.Point(163, 3);
+            this.textBoxDatum.Name = "textBoxDatum";
+            this.textBoxDatum.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDatum.TabIndex = 11;
+            // 
+            // labelDostupnost
+            // 
+            this.labelDostupnost.AutoSize = true;
+            this.labelDostupnost.ForeColor = System.Drawing.Color.Black;
+            this.labelDostupnost.Location = new System.Drawing.Point(163, 207);
+            this.labelDostupnost.Name = "labelDostupnost";
+            this.labelDostupnost.Size = new System.Drawing.Size(87, 13);
+            this.labelDostupnost.TabIndex = 14;
+            this.labelDostupnost.Text = "Dostupnost sobe";
+            // 
+            // buttonRezerviraj
+            // 
+            this.buttonRezerviraj.AutoSize = true;
+            this.buttonRezerviraj.Location = new System.Drawing.Point(3, 273);
+            this.buttonRezerviraj.Name = "buttonRezerviraj";
+            this.buttonRezerviraj.Size = new System.Drawing.Size(90, 23);
+            this.buttonRezerviraj.TabIndex = 9;
+            this.buttonRezerviraj.Text = "Rezerviraj sobu";
+            this.buttonRezerviraj.UseVisualStyleBackColor = true;
+            this.buttonRezerviraj.Click += new System.EventHandler(this.buttonRezerviraj_Click);
+            // 
+            // buttonBirajDatum
+            // 
+            this.buttonBirajDatum.AutoSize = true;
+            this.buttonBirajDatum.Location = new System.Drawing.Point(3, 3);
+            this.buttonBirajDatum.Name = "buttonBirajDatum";
+            this.buttonBirajDatum.Size = new System.Drawing.Size(75, 24);
+            this.buttonBirajDatum.TabIndex = 13;
+            this.buttonBirajDatum.Text = "Biraj datum";
+            this.buttonBirajDatum.UseVisualStyleBackColor = true;
+            this.buttonBirajDatum.Click += new System.EventHandler(this.buttonBirajDatum_Click);
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(9, 39);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 12;
+            this.monthCalendar1.Visible = false;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // groupBoxKarakteristike
             // 
@@ -342,7 +423,7 @@
             this.groupBoxKarakteristike.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBoxKarakteristike.Location = new System.Drawing.Point(0, 0);
             this.groupBoxKarakteristike.Name = "groupBoxKarakteristike";
-            this.groupBoxKarakteristike.Size = new System.Drawing.Size(298, 314);
+            this.groupBoxKarakteristike.Size = new System.Drawing.Size(298, 321);
             this.groupBoxKarakteristike.TabIndex = 8;
             this.groupBoxKarakteristike.TabStop = false;
             this.groupBoxKarakteristike.Text = "Karakteristike sobe";
@@ -462,10 +543,10 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.buttonZatvori);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(399, 0);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(424, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 46);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 48);
             this.flowLayoutPanel2.TabIndex = 11;
             // 
             // flowLayoutPanel1
@@ -474,7 +555,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 46);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 48);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // checkBoxDozvoliPromjene
@@ -505,69 +586,29 @@
             this.tableAdapterManager.HR_VRSTE_USLUGATableAdapter = null;
             this.tableAdapterManager.UpdateOrder = HotelskaRecepcija.HR_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // monthCalendar1
+            // buttonBirajGosta
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(6, 51);
-            this.monthCalendar1.MaxSelectionCount = 1;
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 12;
-            this.monthCalendar1.Visible = false;
-            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            this.buttonBirajGosta.Location = new System.Drawing.Point(3, 243);
+            this.buttonBirajGosta.Name = "buttonBirajGosta";
+            this.buttonBirajGosta.Size = new System.Drawing.Size(75, 23);
+            this.buttonBirajGosta.TabIndex = 15;
+            this.buttonBirajGosta.Text = "Biraj gosta";
+            this.buttonBirajGosta.UseVisualStyleBackColor = true;
+            this.buttonBirajGosta.Click += new System.EventHandler(this.buttonBirajGosta_Click);
             // 
-            // buttonBirajDatum
+            // textBoxOdabraniGost
             // 
-            this.buttonBirajDatum.AutoSize = true;
-            this.buttonBirajDatum.Location = new System.Drawing.Point(220, 22);
-            this.buttonBirajDatum.Name = "buttonBirajDatum";
-            this.buttonBirajDatum.Size = new System.Drawing.Size(75, 23);
-            this.buttonBirajDatum.TabIndex = 13;
-            this.buttonBirajDatum.Text = "Biraj datum";
-            this.buttonBirajDatum.UseVisualStyleBackColor = true;
-            this.buttonBirajDatum.Click += new System.EventHandler(this.buttonBirajDatum_Click);
-            // 
-            // groupBoxRezervacije
-            // 
-            this.groupBoxRezervacije.Controls.Add(this.buttonRezerviraj);
-            this.groupBoxRezervacije.Controls.Add(this.labelDostupnost);
-            this.groupBoxRezervacije.Controls.Add(this.monthCalendar1);
-            this.groupBoxRezervacije.Controls.Add(this.buttonBirajDatum);
-            this.groupBoxRezervacije.Controls.Add(this.textBoxDatum);
-            this.groupBoxRezervacije.Controls.Add(this.buttonProvjeriDostupnost);
-            this.groupBoxRezervacije.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxRezervacije.Location = new System.Drawing.Point(298, 0);
-            this.groupBoxRezervacije.Name = "groupBoxRezervacije";
-            this.groupBoxRezervacije.Size = new System.Drawing.Size(301, 314);
-            this.groupBoxRezervacije.TabIndex = 14;
-            this.groupBoxRezervacije.TabStop = false;
-            this.groupBoxRezervacije.Text = "Rezervacije";
-            // 
-            // labelDostupnost
-            // 
-            this.labelDostupnost.AutoSize = true;
-            this.labelDostupnost.ForeColor = System.Drawing.Color.Black;
-            this.labelDostupnost.Location = new System.Drawing.Point(179, 290);
-            this.labelDostupnost.Name = "labelDostupnost";
-            this.labelDostupnost.Size = new System.Drawing.Size(68, 13);
-            this.labelDostupnost.TabIndex = 14;
-            this.labelDostupnost.Text = "Birajte datum";
-            // 
-            // buttonRezerviraj
-            // 
-            this.buttonRezerviraj.AutoSize = true;
-            this.buttonRezerviraj.Location = new System.Drawing.Point(6, 285);
-            this.buttonRezerviraj.Name = "buttonRezerviraj";
-            this.buttonRezerviraj.Size = new System.Drawing.Size(90, 23);
-            this.buttonRezerviraj.TabIndex = 9;
-            this.buttonRezerviraj.Text = "Rezerviraj sobu";
-            this.buttonRezerviraj.UseVisualStyleBackColor = true;
-            this.buttonRezerviraj.Click += new System.EventHandler(this.buttonRezerviraj_Click);
+            this.textBoxOdabraniGost.Location = new System.Drawing.Point(163, 243);
+            this.textBoxOdabraniGost.Name = "textBoxOdabraniGost";
+            this.textBoxOdabraniGost.Size = new System.Drawing.Size(100, 20);
+            this.textBoxOdabraniGost.TabIndex = 16;
             // 
             // PregledajSobe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonZatvori;
-            this.ClientSize = new System.Drawing.Size(599, 400);
+            this.ClientSize = new System.Drawing.Size(624, 409);
             this.Controls.Add(this.splitContainerBody);
             this.Name = "PregledajSobe";
             this.Text = "Pregledaj sobe";
@@ -586,13 +627,14 @@
             this.hR_SOBEBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hR_SOBEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hR_DatabaseDataSet1)).EndInit();
+            this.groupBoxRezervacije.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.groupBoxKarakteristike.ResumeLayout(false);
             this.groupBoxKarakteristike.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.groupBoxRezervacije.ResumeLayout(false);
-            this.groupBoxRezervacije.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -639,5 +681,8 @@
         private System.Windows.Forms.GroupBox groupBoxRezervacije;
         private System.Windows.Forms.Button buttonRezerviraj;
         private System.Windows.Forms.Label labelDostupnost;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button buttonBirajGosta;
+        private System.Windows.Forms.TextBox textBoxOdabraniGost;
     }
 }

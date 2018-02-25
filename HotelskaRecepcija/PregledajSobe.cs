@@ -15,13 +15,19 @@ using System.Windows.Forms;
 namespace HotelskaRecepcija
 {
     public partial class PregledajSobe : Form
-    {       
+    {
         private SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\HR_Database.mdf;" +
                 "Integrated Security=True");
         public PregledajSobe()
         {
             InitializeComponent();
             conn.Open();
+        }
+        //svojstvo za spremanje u textboxOdabraniGost
+        public string OdabraniGost
+        {
+            get { return textBoxOdabraniGost.Text; }
+            set { textBoxOdabraniGost.Text = value; }
         }
 
         private void PregledajSobe_Load(object sender, EventArgs e)
@@ -92,8 +98,8 @@ namespace HotelskaRecepcija
                     DataTable mojaTablica = dataSet.Tables[0];
 
                     // provjeri nalazi li se trenutna soba na odabrani datum u HR_NOCENJA
-                    textBoxDatum.Text = "Prvi id: " + mojaTablica.Rows[0]["SOBA_ID"].ToString()
-                        + " na datum " + mojaTablica.Rows[0]["DATUM"].ToString();
+                    //textBoxDatum.Text = "Prvi id: " + mojaTablica.Rows[0]["SOBA_ID"].ToString()
+                        //+ " na datum " + mojaTablica.Rows[0]["DATUM"].ToString();
                     foreach (DataRow redak in mojaTablica.Rows)
                     {
                         if (redak["SOBA_ID"].ToString() == idTextBox.Text)
@@ -138,6 +144,8 @@ namespace HotelskaRecepcija
                 monthCalendar1.Visible = false;
                 buttonBirajDatum.Text = "Biraj datum";
                 buttonRezerviraj.Enabled = true;
+                labelDostupnost.Text = "Dostupnost sobe";
+                labelDostupnost.ForeColor = Color.Black;
             }
         }
 
@@ -147,6 +155,7 @@ namespace HotelskaRecepcija
             {
                 // pretpostavit ćemo da je soba slobodna dok ne nađemo rezervaciju
                 buttonRezerviraj.Enabled = true;
+                textBoxDatum.Text = monthCalendar1.SelectionStart.ToString();
                 
             }
             catch (Exception ex)
@@ -158,6 +167,13 @@ namespace HotelskaRecepcija
         private void buttonRezerviraj_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonBirajGosta_Click(object sender, EventArgs e)
+        {
+            BirajGosta forma = new BirajGosta(this);
+            forma.ShowDialog();
+            //forma.DialogResult.
         }
     }
 }
