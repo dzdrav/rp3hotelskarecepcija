@@ -606,6 +606,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.HR_GOSTITableAdapter = null;
             this.tableAdapterManager.HR_NOCENJATableAdapter = null;
+            this.tableAdapterManager.HR_OSOBLJETableAdapter = null;
             this.tableAdapterManager.HR_RACUNITableAdapter = null;
             this.tableAdapterManager.HR_SOBETableAdapter = this.hR_SOBETableAdapter;
             this.tableAdapterManager.HR_USLUGETableAdapter = null;
