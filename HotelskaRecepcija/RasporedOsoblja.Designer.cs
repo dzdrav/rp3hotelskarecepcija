@@ -37,7 +37,6 @@
             this.ClientSize = new System.Drawing.Size(282, 253);
             this.Name = "RasporedOsoblja";
             this.Text = "RasporedOsoblja";
-            this.Load += new System.EventHandler(this.RasporedOsoblja_Load);
             this.ResumeLayout(false);
 
         }

@@ -73,10 +73,5 @@ namespace HotelskaRecepcija
 
         }
 
-
-        private void RasporedOsoblja_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
