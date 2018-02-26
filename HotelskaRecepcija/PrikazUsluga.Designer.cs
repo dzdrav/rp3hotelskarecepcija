@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(524, 381);
             this.Name = "PrikazUsluga";
             this.Text = "PrikazUsluga";
+            this.Load += new System.EventHandler(this.PrikazUsluga_Load);
             this.ResumeLayout(false);
 
         }

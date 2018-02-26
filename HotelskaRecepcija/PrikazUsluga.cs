@@ -73,6 +73,9 @@ namespace HotelskaRecepcija
             }
         }
 
-        
+        private void PrikazUsluga_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

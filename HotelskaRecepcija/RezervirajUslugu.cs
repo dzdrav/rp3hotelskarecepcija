@@ -20,7 +20,7 @@ namespace HotelskaRecepcija
             uslugeRezervacija.Items.Add("TERETANA");
             uslugeRezervacija.Items.Add("SPA");
             uslugeRezervacija.Items.Add("MASAŽA");
-            uslugeRezervacija.Items.Add("SPOSLUGA U SOBU");
+            uslugeRezervacija.Items.Add("POSLUGA U SOBU");
         }
 
         private void RezervirajUsluga_Click(object sender, EventArgs e)

@@ -38,7 +38,6 @@
             this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajRačunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajRačunToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.izdajPredračunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.popisUslugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervacijaUslugeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -123,8 +122,7 @@
             // izdajRačunToolStripMenuItem
             // 
             this.izdajRačunToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.izdajRačunToolStripMenuItem1,
-            this.izdajPredračunToolStripMenuItem});
+            this.izdajRačunToolStripMenuItem1});
             this.izdajRačunToolStripMenuItem.Name = "izdajRačunToolStripMenuItem";
             this.izdajRačunToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.izdajRačunToolStripMenuItem.Text = "Računi";
@@ -134,12 +132,6 @@
             this.izdajRačunToolStripMenuItem1.Name = "izdajRačunToolStripMenuItem1";
             this.izdajRačunToolStripMenuItem1.Size = new System.Drawing.Size(187, 26);
             this.izdajRačunToolStripMenuItem1.Text = "Izdaj račun";
-            // 
-            // izdajPredračunToolStripMenuItem
-            // 
-            this.izdajPredračunToolStripMenuItem.Name = "izdajPredračunToolStripMenuItem";
-            this.izdajPredračunToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.izdajPredračunToolStripMenuItem.Text = "Izdaj predračun";
             // 
             // toolStripDropDownButton1
             // 
@@ -260,7 +252,6 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem izdajRačunToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izdajRačunToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem izdajPredračunToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem popisUslugaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rezervacijaUslugeToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
