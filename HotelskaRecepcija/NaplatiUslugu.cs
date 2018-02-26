@@ -13,8 +13,6 @@ namespace HotelskaRecepcija
 {
     public partial class NaplatiUslugu : Form
     {
-        public string ime;
-        public string prezime;
 
         public NaplatiUslugu()
         {
@@ -98,5 +96,10 @@ namespace HotelskaRecepcija
             }
         }
 
-     }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Račun izdan");
+            this.Close();
+        }
+    }
 }

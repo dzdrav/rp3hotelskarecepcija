@@ -37,7 +37,6 @@
             this.dodajNovogGostaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.popisGostijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izdajRačunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izdajRačunToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.popisUslugaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervacijaUslugeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -121,17 +120,10 @@
             // 
             // izdajRačunToolStripMenuItem
             // 
-            this.izdajRačunToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.izdajRačunToolStripMenuItem1});
             this.izdajRačunToolStripMenuItem.Name = "izdajRačunToolStripMenuItem";
             this.izdajRačunToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.izdajRačunToolStripMenuItem.Text = "Računi";
-            // 
-            // izdajRačunToolStripMenuItem1
-            // 
-            this.izdajRačunToolStripMenuItem1.Name = "izdajRačunToolStripMenuItem1";
-            this.izdajRačunToolStripMenuItem1.Size = new System.Drawing.Size(187, 26);
-            this.izdajRačunToolStripMenuItem1.Text = "Izdaj račun";
+            this.izdajRačunToolStripMenuItem.Text = "Izdaj račun";
+            this.izdajRačunToolStripMenuItem.Click += new System.EventHandler(this.izdajRačunToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton1
             // 
@@ -214,7 +206,7 @@
             this.pictureBoxBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxBackground.Image = global::HotelskaRecepcija.Properties.Resources.hotel_bg;
             this.pictureBoxBackground.Location = new System.Drawing.Point(0, 27);
-            this.pictureBoxBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxBackground.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxBackground.Name = "pictureBoxBackground";
             this.pictureBoxBackground.Size = new System.Drawing.Size(915, 485);
             this.pictureBoxBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -228,7 +220,7 @@
             this.ClientSize = new System.Drawing.Size(915, 512);
             this.Controls.Add(this.pictureBoxBackground);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Homepage";
             this.Text = "Home page";
             this.TransparencyKey = System.Drawing.Color.Transparent;
@@ -251,7 +243,6 @@
         private System.Windows.Forms.ToolStripMenuItem dodajNovogGostaToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem izdajRačunToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izdajRačunToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem popisUslugaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rezervacijaUslugeToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;

@@ -95,5 +95,11 @@ namespace HotelskaRecepcija
             PopisGostiju popis = new PopisGostiju();
             popis.ShowDialog();
         }
+
+        private void izdajRačunToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Racun izdaj = new Racun();
+            izdaj.ShowDialog();
+        }
     }
 }
