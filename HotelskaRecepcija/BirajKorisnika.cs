@@ -61,6 +61,10 @@ namespace HotelskaRecepcija
         private void buttonBirajGostaOK_Click(object sender, EventArgs e)
         {
             m_roditelj.OdabraniGost = m_odabraniID;
+            if (m_roditelj.Dostupnost)
+            {
+                m_roditelj.Rezerviraj = true;
+            }
             this.Close();
         }
 
@@ -68,6 +72,10 @@ namespace HotelskaRecepcija
         private void hR_GOSTIDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             m_roditelj.OdabraniGost = m_odabraniID;
+            if (m_roditelj.Dostupnost)
+            {
+                m_roditelj.Rezerviraj = true;
+            }
             this.Close();
         }
     }

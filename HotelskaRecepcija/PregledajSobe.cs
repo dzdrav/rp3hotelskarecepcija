@@ -34,6 +34,28 @@ namespace HotelskaRecepcija
             set { textBoxOdabraniGost.Text = value; }
         }
 
+        // svojstvo za dohvaćanje statusa dostupnosti trenutne sobe
+        public bool Dostupnost
+        {
+            get
+            {
+                if (labelDostupnost.Text == "Soba je slobodna")
+                {
+                    return true;
+                }
+                else
+                    return false;
+            }
+            set { }
+        }
+
+        // stvojstvo enable buttonRezerviraj
+        public bool Rezerviraj
+        {
+            get { return buttonRezerviraj.Enabled; }
+            set { buttonRezerviraj.Enabled = value; }
+        }
+
         private void PregledajSobe_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hR_DatabaseDataSet1.HR_SOBE' table. You can move, or remove it, as needed.
@@ -123,7 +145,11 @@ namespace HotelskaRecepcija
                     // ako nije zauzeta, onda je slobodna i rezervacija je moguća
                     if (slobodna)
                     {
-                        buttonRezerviraj.Enabled = true;
+                        // ako nismo izabrali gosta, ne možemo obaviti rezervaciju
+                        if (textBoxOdabraniGost.Text != "")
+                        {
+                            buttonRezerviraj.Enabled = true;
+                        }
                         labelDostupnost.Text = "Soba je slobodna";
                         labelDostupnost.ForeColor = Color.DarkGreen;
                     }
@@ -155,6 +181,7 @@ namespace HotelskaRecepcija
                 buttonRezerviraj.Enabled = false;
                 labelDostupnost.Text = "Dostupnost sobe";
                 labelDostupnost.ForeColor = Color.Black;
+                textBoxDatum.Text = "Datum nije izabran";
             }
         }
 

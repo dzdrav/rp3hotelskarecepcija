@@ -152,8 +152,8 @@
             // 
             this.splitContainerBody.Panel2.Controls.Add(this.flowLayoutPanel2);
             this.splitContainerBody.Panel2.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainerBody.Size = new System.Drawing.Size(624, 409);
-            this.splitContainerBody.SplitterDistance = 357;
+            this.splitContainerBody.Size = new System.Drawing.Size(584, 411);
+            this.splitContainerBody.SplitterDistance = 358;
             this.splitContainerBody.TabIndex = 15;
             // 
             // splitContainerUpper
@@ -171,7 +171,7 @@
             // 
             this.splitContainerUpper.Panel2.Controls.Add(this.groupBoxRezervacije);
             this.splitContainerUpper.Panel2.Controls.Add(this.groupBoxKarakteristike);
-            this.splitContainerUpper.Size = new System.Drawing.Size(624, 357);
+            this.splitContainerUpper.Size = new System.Drawing.Size(584, 358);
             this.splitContainerUpper.SplitterDistance = 32;
             this.splitContainerUpper.TabIndex = 0;
             // 
@@ -202,7 +202,7 @@
             this.hR_SOBEBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.hR_SOBEBindingNavigator.Name = "hR_SOBEBindingNavigator";
             this.hR_SOBEBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.hR_SOBEBindingNavigator.Size = new System.Drawing.Size(624, 32);
+            this.hR_SOBEBindingNavigator.Size = new System.Drawing.Size(584, 32);
             this.hR_SOBEBindingNavigator.TabIndex = 16;
             this.hR_SOBEBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -318,7 +318,7 @@
             this.groupBoxRezervacije.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxRezervacije.Location = new System.Drawing.Point(298, 0);
             this.groupBoxRezervacije.Name = "groupBoxRezervacije";
-            this.groupBoxRezervacije.Size = new System.Drawing.Size(326, 321);
+            this.groupBoxRezervacije.Size = new System.Drawing.Size(286, 322);
             this.groupBoxRezervacije.TabIndex = 14;
             this.groupBoxRezervacije.TabStop = false;
             this.groupBoxRezervacije.Text = "Rezervacije";
@@ -345,14 +345,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(320, 302);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(280, 303);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
             // buttonProvjeriDostupnost
             // 
             this.buttonProvjeriDostupnost.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.buttonProvjeriDostupnost.AutoSize = true;
-            this.buttonProvjeriDostupnost.Location = new System.Drawing.Point(3, 211);
+            this.buttonProvjeriDostupnost.Location = new System.Drawing.Point(3, 212);
             this.buttonProvjeriDostupnost.Name = "buttonProvjeriDostupnost";
             this.buttonProvjeriDostupnost.Size = new System.Drawing.Size(133, 24);
             this.buttonProvjeriDostupnost.TabIndex = 10;
@@ -366,7 +366,7 @@
             this.buttonBirajDatum.AutoSize = true;
             this.buttonBirajDatum.Location = new System.Drawing.Point(3, 3);
             this.buttonBirajDatum.Name = "buttonBirajDatum";
-            this.buttonBirajDatum.Size = new System.Drawing.Size(75, 24);
+            this.buttonBirajDatum.Size = new System.Drawing.Size(69, 24);
             this.buttonBirajDatum.TabIndex = 13;
             this.buttonBirajDatum.Text = "Biraj datum";
             this.buttonBirajDatum.UseVisualStyleBackColor = true;
@@ -376,17 +376,18 @@
             // 
             this.textBoxDatum.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxDatum.Enabled = false;
-            this.textBoxDatum.Location = new System.Drawing.Point(163, 5);
+            this.textBoxDatum.Location = new System.Drawing.Point(143, 5);
             this.textBoxDatum.Name = "textBoxDatum";
             this.textBoxDatum.Size = new System.Drawing.Size(100, 20);
             this.textBoxDatum.TabIndex = 11;
+            this.textBoxDatum.Text = "Datum nije izabran";
             // 
             // labelDostupnost
             // 
             this.labelDostupnost.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelDostupnost.AutoSize = true;
             this.labelDostupnost.ForeColor = System.Drawing.Color.Black;
-            this.labelDostupnost.Location = new System.Drawing.Point(196, 217);
+            this.labelDostupnost.Location = new System.Drawing.Point(166, 218);
             this.labelDostupnost.Name = "labelDostupnost";
             this.labelDostupnost.Size = new System.Drawing.Size(87, 13);
             this.labelDostupnost.TabIndex = 14;
@@ -406,7 +407,7 @@
             this.buttonRezerviraj.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.buttonRezerviraj.AutoSize = true;
             this.buttonRezerviraj.Enabled = false;
-            this.buttonRezerviraj.Location = new System.Drawing.Point(3, 274);
+            this.buttonRezerviraj.Location = new System.Drawing.Point(3, 275);
             this.buttonRezerviraj.Name = "buttonRezerviraj";
             this.buttonRezerviraj.Size = new System.Drawing.Size(90, 23);
             this.buttonRezerviraj.TabIndex = 9;
@@ -417,7 +418,7 @@
             // buttonBirajGosta
             // 
             this.buttonBirajGosta.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.buttonBirajGosta.Location = new System.Drawing.Point(3, 243);
+            this.buttonBirajGosta.Location = new System.Drawing.Point(3, 244);
             this.buttonBirajGosta.Name = "buttonBirajGosta";
             this.buttonBirajGosta.Size = new System.Drawing.Size(75, 23);
             this.buttonBirajGosta.TabIndex = 15;
@@ -429,7 +430,7 @@
             // 
             this.textBoxOdabraniGost.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxOdabraniGost.Enabled = false;
-            this.textBoxOdabraniGost.Location = new System.Drawing.Point(163, 245);
+            this.textBoxOdabraniGost.Location = new System.Drawing.Point(143, 246);
             this.textBoxOdabraniGost.Name = "textBoxOdabraniGost";
             this.textBoxOdabraniGost.Size = new System.Drawing.Size(100, 20);
             this.textBoxOdabraniGost.TabIndex = 16;
@@ -452,7 +453,7 @@
             this.groupBoxKarakteristike.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBoxKarakteristike.Location = new System.Drawing.Point(0, 0);
             this.groupBoxKarakteristike.Name = "groupBoxKarakteristike";
-            this.groupBoxKarakteristike.Size = new System.Drawing.Size(298, 321);
+            this.groupBoxKarakteristike.Size = new System.Drawing.Size(298, 322);
             this.groupBoxKarakteristike.TabIndex = 8;
             this.groupBoxKarakteristike.TabStop = false;
             this.groupBoxKarakteristike.Text = "Karakteristike sobe";
@@ -572,10 +573,10 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.buttonZatvori);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(424, 0);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(384, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 48);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 49);
             this.flowLayoutPanel2.TabIndex = 11;
             // 
             // flowLayoutPanel1
@@ -584,7 +585,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 48);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 49);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // checkBoxDozvoliPromjene
@@ -621,9 +622,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonZatvori;
-            this.ClientSize = new System.Drawing.Size(624, 409);
+            this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.splitContainerBody);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimumSize = new System.Drawing.Size(600, 450);
             this.Name = "PregledajSobe";
             this.Text = "Pregledaj sobe";
             this.Load += new System.EventHandler(this.PregledajSobe_Load);
