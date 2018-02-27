@@ -152,7 +152,7 @@
             // 
             this.splitContainerBody.Panel2.Controls.Add(this.flowLayoutPanel2);
             this.splitContainerBody.Panel2.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainerBody.Size = new System.Drawing.Size(584, 411);
+            this.splitContainerBody.Size = new System.Drawing.Size(584, 412);
             this.splitContainerBody.SplitterDistance = 358;
             this.splitContainerBody.TabIndex = 15;
             // 
@@ -576,7 +576,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(384, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 49);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 50);
             this.flowLayoutPanel2.TabIndex = 11;
             // 
             // flowLayoutPanel1
@@ -585,7 +585,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 49);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 50);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // checkBoxDozvoliPromjene
@@ -622,7 +622,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonZatvori;
-            this.ClientSize = new System.Drawing.Size(584, 411);
+            this.ClientSize = new System.Drawing.Size(584, 412);
             this.Controls.Add(this.splitContainerBody);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimumSize = new System.Drawing.Size(600, 450);

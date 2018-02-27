@@ -5,7 +5,6 @@ using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data.OleDb;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;

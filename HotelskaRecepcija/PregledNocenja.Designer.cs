@@ -266,6 +266,7 @@
             this.hR_NOCENJADataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.hR_NOCENJADataGridView.Size = new System.Drawing.Size(577, 264);
             this.hR_NOCENJADataGridView.TabIndex = 0;
+            
             // 
             // dataGridViewTextBoxColumn1
             // 

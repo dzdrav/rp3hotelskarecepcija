@@ -13,6 +13,7 @@ namespace HotelskaRecepcija
 {
     public partial class Racun : Form
     {
+        int idGosta;
         public Racun()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace HotelskaRecepcija
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int idGosta=0;
+            idGosta = 0;
             float suma = 0;
             float cijena = 0;
             String ukupanIznos;
@@ -73,8 +74,15 @@ namespace HotelskaRecepcija
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Račun izdan!");
-            this.Close();
+            if (idGosta == 0)
+            {
+                MessageBox.Show("Račun ne postoji.");
+            }
+            else
+            {
+                MessageBox.Show("Račun izdan!");
+                this.Close();
+            }
         }
     }
     

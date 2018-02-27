@@ -13,6 +13,8 @@ namespace HotelskaRecepcija
 {
     public partial class PopisGostiju : Form
     {
+        int idG, i;
+        int[] polje = new int[100];
         SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\HR_database.mdf;Integrated Security=True");
         public PopisGostiju()
         {
@@ -23,7 +25,7 @@ namespace HotelskaRecepcija
         {
             listView1.Items.Clear();
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM HR_GOSTI ORDER BY prezime ASC", con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM HR_GOSTI", con);
 
             try
             {
@@ -33,7 +35,8 @@ namespace HotelskaRecepcija
 
                 foreach (DataRow dr in dt.Rows)
                 {
-                    ListViewItem item = new ListViewItem(dr["prezime"].ToString());
+                    ListViewItem item = new ListViewItem(dr["Id"].ToString());
+                    item.SubItems.Add(dr["prezime"].ToString());
                     item.SubItems.Add(dr["ime"].ToString());
 
                     listView1.Items.Add(item);
@@ -58,24 +61,55 @@ namespace HotelskaRecepcija
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-
-            SqlCommand cmd = new SqlCommand("SELECT * FROM HR_GOSTI ORDER BY prezime ASC", con);
+            idG = 0;
+            i = -1;
 
             try
             {
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+                SqlCommand cmdd = new SqlCommand("SELECT GOST_ID FROM HR_NOCENJA WHERE DATUM = @date", con);
+                cmdd.Parameters.AddWithValue("@date", DateTime.Parse(dateTimePicker1.Text));
 
-                foreach (DataRow dr in dt.Rows)
+                SqlDataAdapter sda1 = new SqlDataAdapter(cmdd);
+                DataTable dt1 = new DataTable();
+                sda1.Fill(dt1);
+
+                foreach (DataRow dr in dt1.Rows)
                 {
-                    ListViewItem item = new ListViewItem(dr["prezime"].ToString());
-                    item.SubItems.Add(dr["ime"].ToString());
+                    idG = Int32.Parse(dr["GOST_ID"].ToString());
+                    polje[++i] = idG;
+                    //++i;
+                }
 
-                    listView1.Items.Add(item);
+                if (idG == 0)
+                {
+                    listView1.Items.Clear();
+                }
+
+                for (int j = 0; j <= i; j++)
+                {
+                    SqlCommand cmd = new SqlCommand("SELECT Id, ime, prezime FROM HR_GOSTI WHERE Id = @IdGost", con);
+                    cmd.Parameters.AddWithValue("@IdGost", polje[j]);
+
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        ListViewItem item = new ListViewItem(dr["Id"].ToString());
+                        item.SubItems.Add(dr["prezime"].ToString());
+                        item.SubItems.Add(dr["ime"].ToString());
+
+                        listView1.Items.Add(item);
+                    }
                 }
             }
             catch (SqlException ex)

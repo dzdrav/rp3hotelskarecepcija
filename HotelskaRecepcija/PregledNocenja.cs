@@ -36,5 +36,7 @@ namespace HotelskaRecepcija
             this.hR_NOCENJATableAdapter.Fill(this.hR_DatabaseDataSet1.HR_NOCENJA);
 
         }
+
+        
     }
 }

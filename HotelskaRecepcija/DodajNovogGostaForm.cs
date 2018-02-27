@@ -13,9 +13,7 @@ namespace HotelskaRecepcija
 {
     public partial class DodajNovogGostaForm : Form
     {
-        //SqlConnection con;
-        //SqlCommand cmd;
-
+        
         public DodajNovogGostaForm()
         {
             InitializeComponent();
@@ -36,6 +34,11 @@ namespace HotelskaRecepcija
             {
                 MessageBox.Show("Niste unijeli sve podatke!");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
